@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/aiden-allen/Desktop/simulator",
+  "command": "/usr/bin/c++  -I/home/aiden-allen/Desktop/LoadingBar/bar-library/library/include -std=gnu++17 -o CMakeFiles/simulator.dir/main.cpp.o -c /home/aiden-allen/Desktop/simulator/main.cpp -stdlib=libc++",
+  "file": "/home/aiden-allen/Desktop/simulator/main.cpp",
+  "output": "CMakeFiles/loadingBar.dir/main.cpp.o"
+  ]
+}
