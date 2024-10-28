@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = -DSFML_STATIC
 
-CXX_INCLUDES = -isystem /home/aiden-allen/Desktop/simulator/build/_deps/sfml-src/include
+CXX_INCLUDES = -isystem /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include
 
 CXX_FLAGS = -stdlib=libc++
 

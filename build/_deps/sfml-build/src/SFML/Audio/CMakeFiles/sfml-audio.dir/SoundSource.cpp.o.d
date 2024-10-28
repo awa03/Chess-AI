@@ -1,0 +1,10 @@
+_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o: \
+  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Audio/SoundSource.cpp \
+  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/SoundSource.hpp \
+  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
+  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/AlResource.hpp \
+  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Vector3.hpp \
+  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Vector3.inl \
+  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Audio/ALCheck.hpp \
+  /usr/include/AL/al.h /usr/include/AL/alc.h
