@@ -2,179 +2,203 @@
 #define _BOARD_HPP_
 
 #include <SFML/Graphics.hpp>
+#include "pieces.hpp"
 #include <iostream>
 #include <vector>
 #include <filesystem>
+#include <memory>
 
 class Board {
 public:
-    Board(sf::RenderWindow* window) : gameWindow(window), whitesMove(true) {
-        Rects.resize(ROW, std::vector<sf::RectangleShape>(COL));
-        Pieces.resize(ROW, std::vector<sf::Sprite>(COL));
-        selectedIndex = {-1, -1};
+  // Constructor initialization
+  Board(sf::RenderWindow* window) : gameWindow(window), whitesMove(true), selectedIndex{-1, -1} {
+    // Resize without copying
+    Pieces.resize(ROW);
+    for (auto& row : Pieces) {
+      row.resize(COL);
+    }
 
-        std::filesystem::path currentPath = std::filesystem::current_path();
-        std::cout << "Current working directory: " << currentPath << std::endl;
+    squareSize = gameWindow->getSize().x / ROW;
 
-        squareSize = gameWindow->getSize().x / ROW;
+    if (!InitializeTextures()) {
+      std::cerr << "Failed to load textures." << std::endl;
+    }
+    placeInitialPieces();
 
-        InitializePieces();
+    Rects.resize(ROW, std::vector<sf::RectangleShape>(COL));
+    for (int i = 0; i < ROW; i++) {
+      for (int j = 0; j < COL; j++) {
+        Rects[i][j] = sf::RectangleShape(sf::Vector2f(squareSize, squareSize));
+        Rects[i][j].setFillColor((i + j) % 2 == 0 ? sf::Color::White : sf::Color(80, 80, 80));
+        Rects[i][j].setPosition(j * squareSize, i * squareSize);
+      }
+    }
+  }
 
-        for (int i = 0; i < ROW; i++) {
-            for (int j = 0; j < COL; j++) {
-                Rects[i][j] = sf::RectangleShape(sf::Vector2f(squareSize, squareSize));
-                Rects[i][j].setFillColor((i + j) % 2 == 0 ? sf::Color::White : sf::Color(80, 80, 80));
-                Rects[i][j].setPosition(j * squareSize, i * squareSize);
-            }
+  void selectPiece() {
+    selectedIndex = getHoveredSquare();
+    isSelected = true;
+  }
+
+  bool isWhiteSelected() {
+    auto& piece = Pieces[selectedIndex.x][selectedIndex.y];
+    std::cout << "Selected Type: " << piece->getTypeString() << "\n";
+    if (piece) {
+      return piece->getColor() == Pieces::Color::WHITE;
+    }
+    return false;
+  }
+
+  void placePiece() {
+    sf::Vector2<int> placeIndex = getHoveredSquare();
+    if ((whitesMove && !isWhiteSelected()) || (!whitesMove && isWhiteSelected())) {
+      isSelected = false;
+      return;
+    }
+
+    if (isValidIndex(selectedIndex) && isValidIndex(placeIndex)) {
+      Pieces[placeIndex.x][placeIndex.y] = std::move(Pieces[selectedIndex.x][selectedIndex.y]);
+      centerPiece(*Pieces[placeIndex.x][placeIndex.y]->getSprite(), placeIndex);
+
+      isSelected = false;  
+      selectedIndex = {-1, -1};  
+      whitesMove = !whitesMove;
+    } else {
+      std::cerr << "Invalid selection or placement index.\n";
+    }
+  }
+
+  sf::Vector2<int> getHoveredSquare() {
+    sf::Vector2i mousePosition = sf::Mouse::getPosition(*gameWindow);
+    for (int i = 0; i < ROW; i++) {
+      for (int j = 0; j < COL; j++) {
+        if (Rects[i][j].getGlobalBounds().contains(
+          static_cast<float>(mousePosition.x), static_cast<float>(mousePosition.y))) {
+          isSelected = true;
+          std::cout << "Selected Position: " << i << ", " << j << "\n";
+          return {i, j};
         }
-
-        placeInitialPieces();
+      }
     }
+    return {-1, -1};
+  }
 
-    void selectPiece() {
-        selectedIndex = getHoveredSquare();
-    }
-
-    bool isWhiteSelected(){
-      sf::Sprite piece = Pieces[selectedIndex.x][selectedIndex.y];
-      if(piece.getTexture() == &w_pawn_texture){
-        return true; 
-      }
-      else if(piece.getTexture() == &w_knight_texture){
-        return true; 
-      }
-      else if(piece.getTexture() == &w_queen_texture){
-        return true; 
-      }
-      else if(piece.getTexture() == &w_pawn_texture){
-        return true; 
-      }
-      else if(piece.getTexture() == &w_rook_texture){
-        return true; 
-      }
-      else if(piece.getTexture() == &w_bishop_texture){
-        return true; 
-      }
-      else if(piece.getTexture() == &w_king_texture){
-        return true; 
-      }
-      return false;
-    }
-
-    void placePiece() {
-        sf::Vector2<int> placeIndex = getHoveredSquare();
-        if((!whitesMove && isWhiteSelected()) || (whitesMove && !isWhiteSelected())) {
-          isSelected = false;
-          return;
+  void draw() {
+    for (int i = 0; i < ROW; i++) {
+      for (int j = 0; j < COL; j++) {
+        gameWindow->draw(Rects[i][j]);
+        if (Pieces[i][j] && Pieces[i][j]->getSprite()->getTexture()) {
+          gameWindow->draw(*Pieces[i][j]->getSprite());
         }
-
-        if (isValidIndex(selectedIndex) && isValidIndex(placeIndex)) {
-            Pieces[placeIndex.x][placeIndex.y] = Pieces[selectedIndex.x][selectedIndex.y];
-            Pieces[selectedIndex.x][selectedIndex.y] = sf::Sprite(); // Clear the old position
-
-            centerPiece(Pieces[placeIndex.x][placeIndex.y], placeIndex);
-            isSelected = false;  // Reset selection status
-            selectedIndex = {-1, -1};  // Clear selected index
-            whitesMove = !whitesMove;
-        } else {
-            std::cerr << "Invalid selection or placement index.\n";
-        }
+      }
     }
+  }
 
-    sf::Vector2<int> getHoveredSquare() {
-        sf::Vector2i mousePosition = sf::Mouse::getPosition(*gameWindow);
-        for (int i = 0; i < ROW; i++) {
-            for (int j = 0; j < COL; j++) {
-                if (Rects[i][j].getGlobalBounds().contains(
-                    static_cast<float>(mousePosition.x), static_cast<float>(mousePosition.y))) {
-                    std::cout << "Mouse is in square: (" << i << ", " << j << ")\n";
-                    isSelected = true;
-                    return {i, j};  // Return row and column index instead of mouse position
-                }
-            }
-        }
-        return {-1, -1};  // Return invalid index if no square contains the mouse
-    }
-
-    void draw() {
-        for (int i = 0; i < ROW; i++) {
-            for (int j = 0; j < COL; j++) {
-                gameWindow->draw(Rects[i][j]);
-                if (Pieces[i][j].getTexture()) {
-                    gameWindow->draw(Pieces[i][j]);
-                }
-            }
-        }
-    }
-
-    void DebugInfo(){
-      std::cout << "\n\nDEBUG INFO ___________________________________________\n";
-      std::cout << "isSelected: " << isSelected << "\n";
-      std::cout << "whitesMove: " << whitesMove << "\n";
-      std::cout << "squareSize: " << squareSize << "\n";
-      // std::cout << "isWhiteSelected: " << isWhiteSelected() << "\n"; 
-    }
-
-    bool isSelected = false;
+  bool isSelected = false;
 
 private:
-    std::vector<std::vector<sf::RectangleShape>> Rects;
-    std::vector<std::vector<sf::Sprite>> Pieces;
-    sf::Vector2<int> selectedIndex;
-    sf::RenderWindow* gameWindow;
-    bool whitesMove;
+  std::vector<std::vector<sf::RectangleShape>> Rects;
+  std::vector<std::vector<std::unique_ptr<Pieces::Piece>>> Pieces;
+  sf::Vector2<int> selectedIndex;
+  sf::RenderWindow* gameWindow;
+  bool whitesMove;
 
-    static const int ROW = 8;
-    static const int COL = 8;
-    int squareSize;
+  static const int ROW = 8;
+  static const int COL = 8;
+  int squareSize;
 
-    sf::Texture w_pawn_texture, b_pawn_texture;
-    sf::Texture w_knight_texture, b_knight_texture;
-    sf::Texture w_rook_texture, b_rook_texture;
-    sf::Texture w_king_texture, b_king_texture;
-    sf::Texture w_queen_texture, b_queen_texture;
-    sf::Texture w_bishop_texture, b_bishop_texture;
+  sf::Texture w_pawn_texture, b_pawn_texture;
+  sf::Texture w_knight_texture, b_knight_texture;
+  sf::Texture w_rook_texture, b_rook_texture;
+  sf::Texture w_king_texture, b_king_texture;
+  sf::Texture w_queen_texture, b_queen_texture;
+  sf::Texture w_bishop_texture, b_bishop_texture;
 
-    void InitializePieces() {
-        if (!w_pawn_texture.loadFromFile("static/pieces/w-pawn.png")) std::cerr << "Failed to load white pawn texture.\n";
-        if (!b_pawn_texture.loadFromFile("static/pieces/b-pawn.png")) std::cerr << "Failed to load black pawn texture.\n";
-        if (!w_knight_texture.loadFromFile("static/pieces/w-knight.png")) std::cerr << "Failed to load white knight texture.\n";
-        if (!b_knight_texture.loadFromFile("static/pieces/b-knight.png")) std::cerr << "Failed to load black knight texture.\n";
-        if (!w_rook_texture.loadFromFile("static/pieces/w-rook.png")) std::cerr << "Failed to load white rook texture.\n";
-        if (!b_rook_texture.loadFromFile("static/pieces/b-rook.png")) std::cerr << "Failed to load black rook texture.\n";
-        if (!w_king_texture.loadFromFile("static/pieces/w-king.png")) std::cerr << "Failed to load white king texture.\n";
-        if (!b_king_texture.loadFromFile("static/pieces/b-king.png")) std::cerr << "Failed to load black king texture.\n";
-        if (!w_queen_texture.loadFromFile("static/pieces/w-queen.png")) std::cerr << "Failed to load white queen texture.\n";
-        if (!b_queen_texture.loadFromFile("static/pieces/b-queen.png")) std::cerr << "Failed to load black queen texture.\n";
-        if (!w_bishop_texture.loadFromFile("static/pieces/w-bishop.png")) std::cerr << "Failed to load white bishop texture.\n";
-        if (!b_bishop_texture.loadFromFile("static/pieces/b-bishop.png")) std::cerr << "Failed to load black bishop texture.\n";
+  bool InitializeTextures() {
+    return w_pawn_texture.loadFromFile("static/pieces/w-pawn.png") &&
+    b_pawn_texture.loadFromFile("static/pieces/b-pawn.png") &&
+    w_knight_texture.loadFromFile("static/pieces/w-knight.png") &&
+    b_knight_texture.loadFromFile("static/pieces/b-knight.png") &&
+    w_rook_texture.loadFromFile("static/pieces/w-rook.png") &&
+    b_rook_texture.loadFromFile("static/pieces/b-rook.png") &&
+    w_king_texture.loadFromFile("static/pieces/w-king.png") &&
+    b_king_texture.loadFromFile("static/pieces/b-king.png") &&
+    w_queen_texture.loadFromFile("static/pieces/w-queen.png") &&
+    b_queen_texture.loadFromFile("static/pieces/b-queen.png") &&
+    w_bishop_texture.loadFromFile("static/pieces/w-bishop.png") &&
+    b_bishop_texture.loadFromFile("static/pieces/b-bishop.png");
+  }
+
+  void placeInitialPieces() {
+    // Place Pawns
+    for (int j = 0; j < COL; j++) {
+      Pieces[1][j] = createPiece(Pieces::PAWN, Pieces::WHITE);
+      Pieces[6][j] = createPiece(Pieces::PAWN, Pieces::BLACK);
+      Pieces[1][j]->setTexture(w_pawn_texture);
+      Pieces[6][j]->setTexture(b_pawn_texture);
+      centerPiece(*Pieces[1][j]->getSprite(), {1, j});
+      centerPiece(*Pieces[6][j]->getSprite(), {6, j});
     }
 
-    void placeInitialPieces() {
-        for (int j = 0; j < COL; j++) {
-            // White pieces (Row 0)
-            if (j == 0 || j == 7) Pieces[0][j].setTexture(w_rook_texture);
-            else if (j == 1 || j == 6) Pieces[0][j].setTexture(w_knight_texture);
-            else if (j == 2 || j == 5) Pieces[0][j].setTexture(w_bishop_texture);
-            else if (j == 3) Pieces[0][j].setTexture(w_queen_texture);
-            else if (j == 4) Pieces[0][j].setTexture(w_king_texture);
+    Pieces[0][0] = createPiece(Pieces::ROOK, Pieces::WHITE);
+    Pieces[0][7] = createPiece(Pieces::ROOK, Pieces::WHITE);
+    Pieces[7][0] = createPiece(Pieces::ROOK, Pieces::BLACK);
+    Pieces[7][7] = createPiece(Pieces::ROOK, Pieces::BLACK);
+    Pieces[0][0]->setTexture(w_rook_texture);
+    Pieces[0][7]->setTexture(w_rook_texture);
+    Pieces[7][0]->setTexture(b_rook_texture);
+    Pieces[7][7]->setTexture(b_rook_texture);
 
-            // Black pieces (Row 7)
-            if (j == 0 || j == 7) Pieces[7][j].setTexture(b_rook_texture);
-            else if (j == 1 || j == 6) Pieces[7][j].setTexture(b_knight_texture);
-            else if (j == 2 || j == 5) Pieces[7][j].setTexture(b_bishop_texture);
-            else if (j == 3) Pieces[7][j].setTexture(b_queen_texture);
-            else if (j == 4) Pieces[7][j].setTexture(b_king_texture);
+    // Place Knights
+    Pieces[0][1] = createPiece(Pieces::KNIGHT, Pieces::WHITE);
+    Pieces[0][6] = createPiece(Pieces::KNIGHT, Pieces::WHITE);
+    Pieces[7][1] = createPiece(Pieces::KNIGHT, Pieces::BLACK);
+    Pieces[7][6] = createPiece(Pieces::KNIGHT, Pieces::BLACK);
+    Pieces[0][1]->setTexture(w_knight_texture);
+    Pieces[0][6]->setTexture(w_knight_texture);
+    Pieces[7][1]->setTexture(b_knight_texture);
+    Pieces[7][6]->setTexture(b_knight_texture);
 
-            // Set scale and position for pieces to fit in the square
-            centerPiece(Pieces[0][j], {0, j});
-            centerPiece(Pieces[7][j], {7, j});
+    // Place Bishops
+    Pieces[0][2] = createPiece(Pieces::BISHOP, Pieces::WHITE);
+    Pieces[0][5] = createPiece(Pieces::BISHOP, Pieces::WHITE);
+    Pieces[7][2] = createPiece(Pieces::BISHOP, Pieces::BLACK);
+    Pieces[7][5] = createPiece(Pieces::BISHOP, Pieces::BLACK);
+    Pieces[0][2]->setTexture(w_bishop_texture);
+    Pieces[0][5]->setTexture(w_bishop_texture);
+    Pieces[7][2]->setTexture(b_bishop_texture);
+    Pieces[7][5]->setTexture(b_bishop_texture);
+
+    // Place Queens
+    Pieces[0][3] = createPiece(Pieces::QUEEN, Pieces::WHITE);
+    Pieces[7][3] = createPiece(Pieces::QUEEN, Pieces::BLACK);
+    Pieces[0][3]->setTexture(w_queen_texture);
+    Pieces[7][3]->setTexture(b_queen_texture);
+
+    // Place Kings
+    Pieces[0][4] = createPiece(Pieces::KING, Pieces::WHITE);
+    Pieces[7][4] = createPiece(Pieces::KING, Pieces::BLACK);
+    Pieces[0][4]->setTexture(w_king_texture);
+    Pieces[7][4]->setTexture(b_king_texture);
+
+    for (int i = 0; i < ROW; i++) {
+      for (int j = 0; j < COL; j++) {
+        if (Pieces[i][j]) {
+          centerPiece(*Pieces[i][j]->getSprite(), {i, j});
         }
+      }
+    }
+  }
 
-        // Place pawns for both white and black
-        for (int j = 0; j < COL; j++) {
-            centerPawn(Pieces[1][j], w_pawn_texture, {1, j}); // White pawns
-            centerPawn(Pieces[6][j], b_pawn_texture, {6, j}); // Black pawns
+    std::unique_ptr<Pieces::Piece> createPiece(Pieces::Type type, Pieces::Color color) {
+        switch (type) {
+            case Pieces::PAWN: return std::make_unique<Pieces::Pawn>(color);
+            case Pieces::QUEEN: return std::make_unique<Pieces::Queen>(color);
+            case Pieces::KING: return std::make_unique<Pieces::King>(color);
+            case Pieces::BISHOP: return std::make_unique<Pieces::Bishop>(color);
+            case Pieces::KNIGHT: return std::make_unique<Pieces::Knight>(color);
+            case Pieces::ROOK: return std::make_unique<Pieces::Rook>(color);
+            default: return nullptr;
         }
     }
 
@@ -183,11 +207,6 @@ private:
                        static_cast<float>(squareSize) / piece.getTexture()->getSize().y);
         piece.setPosition(position.y * squareSize + (squareSize - piece.getGlobalBounds().width) / 2,
                           position.x * squareSize + (squareSize - piece.getGlobalBounds().height) / 2);
-    }
-
-    void centerPawn(sf::Sprite& pawn, const sf::Texture& texture, const sf::Vector2<int>& position) {
-        pawn.setTexture(texture);
-        centerPiece(pawn, position);
     }
 
     bool isValidIndex(const sf::Vector2<int>& index) const {

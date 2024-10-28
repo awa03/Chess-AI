@@ -948,6 +948,7 @@ CMakeFiles/main.dir/src/main.cpp.o: \
   /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Graphics/Text.hpp \
   /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp \
   /home/aiden-allen/Desktop/chess-ai/src/include/board.hpp \
+  /home/aiden-allen/Desktop/chess-ai/src/include/pieces.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/iostream \
   /usr/lib/llvm-18/bin/../include/c++/v1/istream \
   /usr/lib/llvm-18/bin/../include/c++/v1/filesystem \

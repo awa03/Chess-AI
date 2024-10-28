@@ -38,9 +38,9 @@ int main() {
         }
 
         float deltaTime = clock.restart().asSeconds();
-        b.DebugInfo();
+        // b.DebugInfo();
         window.clear();
-        window.draw(title);  // Uncomment this line to display the title
+        // window.draw(title);  // Uncomment this line to display the title
         b.draw();
         window.display();
     }

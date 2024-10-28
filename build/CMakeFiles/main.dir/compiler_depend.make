@@ -79,6 +79,7 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
   _deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
   _deps/sfml-src/include/SFML/Window/WindowStyle.hpp \
   /home/aiden-allen/Desktop/chess-ai/src/include/board.hpp \
+  /home/aiden-allen/Desktop/chess-ai/src/include/pieces.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -1601,6 +1602,8 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
 
 /usr/lib/llvm-18/include/c++/v1/__format/formatter_integer.h:
 
+/usr/lib/llvm-18/include/c++/v1/__format/formatter_floating_point.h:
+
 /usr/lib/llvm-18/include/c++/v1/cwctype:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
@@ -1755,8 +1758,6 @@ _deps/sfml-src/include/SFML/Window/Vulkan.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/sift_down.h:
 
-/usr/lib/llvm-18/include/c++/v1/__format/formatter_floating_point.h:
-
 /usr/lib/llvm-18/include/c++/v1/__algorithm/in_fun_result.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/max_element.h:
@@ -1810,10 +1811,6 @@ _deps/sfml-src/include/SFML/Window/WindowStyle.hpp:
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 _deps/sfml-src/include/SFML/System/ThreadLocalPtr.inl:
-
-/usr/lib/llvm-18/include/c++/v1/__algorithm/pop_heap.h:
-
-/usr/include/limits.h:
 
 /usr/lib/llvm-18/include/c++/v1/__type_traits/dependent_type.h:
 
@@ -2191,6 +2188,8 @@ _deps/sfml-src/include/SFML/Graphics/Transform.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__filesystem/perm_options.h:
 
+/home/aiden-allen/Desktop/chess-ai/src/include/pieces.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/lib/llvm-18/include/c++/v1/__concepts/constructible.h:
@@ -2200,6 +2199,12 @@ _deps/sfml-src/include/SFML/Graphics/Transform.hpp:
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_find_end.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -2278,6 +2283,10 @@ _deps/sfml-src/include/SFML/System/Time.hpp:
 /usr/include/endian.h:
 
 /usr/include/stdint.h:
+
+/usr/include/limits.h:
+
+/usr/lib/llvm-18/include/c++/v1/__algorithm/pop_heap.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
@@ -2404,12 +2413,6 @@ _deps/sfml-src/include/SFML/Window/VideoMode.hpp:
 _deps/sfml-src/include/SFML/Window/Cursor.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_find_end.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/lib/llvm-18/include/c++/v1/__type_traits/common_type.h:
 
