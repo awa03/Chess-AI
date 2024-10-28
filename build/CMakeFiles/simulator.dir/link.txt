@@ -1,1 +1,0 @@
-/usr/bin/clang++ -stdlib=libc++ CMakeFiles/simulator.dir/src/main.cpp.o -o bin/simulator  /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 
