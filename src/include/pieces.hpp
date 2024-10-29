@@ -22,19 +22,20 @@ namespace Pieces {
   class Piece {
   public:
     virtual ~Piece() = default;
-    virtual void move() = 0;
     virtual void setTexture(const sf::Texture& t){
       sprite->setTexture(t);
     };
-    virtual void canMove() = 0;
-
     virtual Color getColor() {
       return pieceColor;
     }
 
+    virtual std::string getColorString() {
+      return (pieceColor == Color::WHITE)? "WHITE" : "BLACK";
+    }
     virtual Type getType(){
       return pieceType;
     }
+
 
     virtual std::string getTypeString() = 0;
 
@@ -46,6 +47,7 @@ namespace Pieces {
       return sprite.get();
     }
 
+  bool hasMoved = false;
   protected: 
     std::unique_ptr<sf::Sprite> sprite;
     Type pieceType;
@@ -59,16 +61,9 @@ namespace Pieces {
       pieceColor = sC; 
       sprite = std::make_unique<sf::Sprite>(); 
     }
-    void promote() {
-    }
-    void move() override {
-    }
-    void canMove() override {
-    }
     std::string getTypeString() override {
       return "PAWN";
     }
-    
   };
 
   class King : public Piece {
@@ -77,10 +72,6 @@ namespace Pieces {
       pieceType = Type::KING;
       pieceColor = sC;
       sprite = std::make_unique<sf::Sprite>(); 
-    }
-    void move() override {
-    }
-    void canMove() override {
     }
     std::string getTypeString() override {
       return "KING";
@@ -94,10 +85,6 @@ namespace Pieces {
       pieceColor = sC;
       sprite = std::make_unique<sf::Sprite>(); 
     }
-    void move() override {
-    }
-    void canMove() override {
-    }
     std::string getTypeString() override {
       return "BISHOP";
     }
@@ -109,10 +96,6 @@ namespace Pieces {
       pieceType = Type::QUEEN;
       pieceColor = sC;
       sprite = std::make_unique<sf::Sprite>(); 
-    }
-    void move() override {
-    }
-    void canMove() override {
     }
     std::string getTypeString() override {
       return "QUEEN";
@@ -126,10 +109,6 @@ namespace Pieces {
       pieceColor = sC;
       sprite = std::make_unique<sf::Sprite>(); 
     }
-    void move() override {
-    }
-    void canMove() override {
-    }
     std::string getTypeString() override {
       return "ROOK";
     }
@@ -141,10 +120,6 @@ namespace Pieces {
       pieceType = Type::KNIGHT;
       pieceColor = sC;
       sprite = std::make_unique<sf::Sprite>(); 
-    }
-    void move() override {
-    }
-    void canMove() override {
     }
     std::string getTypeString() override {
       return "KNIGHT";

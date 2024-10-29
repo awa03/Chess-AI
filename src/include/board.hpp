@@ -5,7 +5,6 @@
 #include "pieces.hpp"
 #include <iostream>
 #include <vector>
-#include <filesystem>
 #include <memory>
 
 class Board {
@@ -26,18 +25,83 @@ public:
     placeInitialPieces();
 
     Rects.resize(ROW, std::vector<sf::RectangleShape>(COL));
+    highlightRects.resize(ROW, std::vector<sf::RectangleShape>(COL));
     for (int i = 0; i < ROW; i++) {
       for (int j = 0; j < COL; j++) {
         Rects[i][j] = sf::RectangleShape(sf::Vector2f(squareSize, squareSize));
         Rects[i][j].setFillColor((i + j) % 2 == 0 ? sf::Color::White : sf::Color(80, 80, 80));
         Rects[i][j].setPosition(j * squareSize, i * squareSize);
+        highlightRects[i][j] = sf::RectangleShape(sf::Vector2f(squareSize, squareSize));
+        highlightRects[i][j].setFillColor(sf::Color(0, 0, 0, 0));
+        highlightRects[i][j].setPosition(j * squareSize, i * squareSize);
       }
     }
   }
 
+  void highlightPossibleMoves() {
+    std::cout << "Highlighting: " << selectedIndex.x << ", " << selectedIndex.y << "\n";
+    auto& piece = Pieces[selectedIndex.x][selectedIndex.y];
+    if (piece) {
+        highlightRects[selectedIndex.x][selectedIndex.y].setFillColor(sf::Color(0, 255, 0, 50)); // Highlight selected square
+        if (piece->getType() == Pieces::Type::PAWN) {
+            int direction = (piece->getColor() == Pieces::Color::WHITE) ? 1 : -1; // White moves up, Black moves down
+            highlightPawnAttack(direction);
+            if (isValidIndex({selectedIndex.x + direction, selectedIndex.y}) 
+            && !(Pieces[selectedIndex.x][selectedIndex.y + 1] == nullptr) && Pieces[selectedIndex.x][selectedIndex.y + 1]->hasMoved == false){
+                highlightRects[selectedIndex.x + direction][selectedIndex.y].setFillColor(sf::Color(0, 0, 255, 50)); // Highlight forward move
+                highlightRects[selectedIndex.x + (direction * 2)][selectedIndex.y].setFillColor(sf::Color(0, 0, 255, 50)); // Highlight forward move
+                Pieces[selectedIndex.x][selectedIndex.y + 1]->hasMoved = true;
+            }
+            else if (isValidIndex({selectedIndex.x + direction, selectedIndex.y}) 
+            && (Pieces[selectedIndex.x][selectedIndex.y + 1] == nullptr)){
+                highlightRects[selectedIndex.x + direction][selectedIndex.y].setFillColor(sf::Color(0, 0, 255, 50)); // Highlight forward move
+            }
+        }
+    }
+  }
+// (Pieces[selectedIndex.x + direction][selectedIndex.y + 1]->getColor() == Pieces::Color::WHITE) == whitesMove)
+
+  void highlightPawnAttack(int& direction){
+    std::vector<int> yDir = {-1, 1};
+    for(auto& d : yDir){
+      if(highlightPawnHelper(direction, d)){
+        highlightRects[selectedIndex.x + direction][selectedIndex.y + d].setFillColor(sf::Color(255, 0, 0, 50)); // Highlight forward move
+      }
+    }
+  }
+  bool highlightPawnHelper(int& direction, int& d){
+    return (isValidIndex({selectedIndex.x + direction, selectedIndex.y + d}) 
+        && (Pieces[selectedIndex.x + direction][selectedIndex.y + d] != nullptr) 
+        // if pieces same color dont highlight
+        && (Pieces[selectedIndex.x + direction][selectedIndex.y + d]->getColor()
+        != Pieces[selectedIndex.x][selectedIndex.y]->getColor()));
+  }
+
+  void clearHighlights() {
+    for (int i = 0; i < ROW; i++) {
+        for (int j = 0; j < COL; j++) {
+            highlightRects[i][j].setFillColor(sf::Color(0, 0, 0, 0)); // Reset to transparent
+        }
+    }
+  }
+
   void selectPiece() {
+    clearHighlights();
     selectedIndex = getHoveredSquare();
-    isSelected = true;
+    if ((whitesMove && !isWhiteSelected()) || (!whitesMove && isWhiteSelected())) {
+      isSelected = false;
+      return;
+    }
+
+    // Check if correct player is moving -
+    // TODO: SIMPLIFY EXPRESSION
+    if(((Pieces[selectedIndex.x][selectedIndex.y]->getColor() == Pieces::Color::WHITE) && whitesMove) || 
+    !((Pieces[selectedIndex.x][selectedIndex.y]->getColor() == Pieces::Color::WHITE) && whitesMove)) {
+      isSelected = true;
+    }
+
+    else{ selectedIndex = {-1, -1}; return;}
+    highlightPossibleMoves();
   }
 
   bool isWhiteSelected() {
@@ -56,13 +120,28 @@ public:
       return;
     }
 
+    std::cout << "Selected Color Selected: " << Pieces[selectedIndex.x][selectedIndex.y]->getColorString() << "\n";
+    std::cout << "Place Color Selected: " << placeIndex.x << ", " << placeIndex.y << "\n";
+
+
+    if((isValidIndex(selectedIndex) && isValidIndex(selectedIndex) && Pieces[placeIndex.x][placeIndex.y] != nullptr) && 
+      (Pieces[selectedIndex.x][selectedIndex.y]->getColor() == Pieces[placeIndex.x][placeIndex.y]->getColor())) {
+      selectedIndex = placeIndex;
+      clearHighlights();
+      highlightPossibleMoves();
+      return;
+    }
+
     if (isValidIndex(selectedIndex) && isValidIndex(placeIndex)) {
+      std::cout << "Place Color Selected 2: " << placeIndex.x << ", " << placeIndex.y << "\n";
+      std::cout << "Place Color Selected 3: " << selectedIndex.x << ", " << selectedIndex.y << "\n";
       Pieces[placeIndex.x][placeIndex.y] = std::move(Pieces[selectedIndex.x][selectedIndex.y]);
       centerPiece(*Pieces[placeIndex.x][placeIndex.y]->getSprite(), placeIndex);
 
       isSelected = false;  
       selectedIndex = {-1, -1};  
       whitesMove = !whitesMove;
+      clearHighlights();
     } else {
       std::cerr << "Invalid selection or placement index.\n";
     }
@@ -90,6 +169,7 @@ public:
         if (Pieces[i][j] && Pieces[i][j]->getSprite()->getTexture()) {
           gameWindow->draw(*Pieces[i][j]->getSprite());
         }
+        gameWindow->draw(highlightRects[i][j]);
       }
     }
   }
@@ -98,6 +178,7 @@ public:
 
 private:
   std::vector<std::vector<sf::RectangleShape>> Rects;
+  std::vector<std::vector<sf::RectangleShape>> highlightRects;
   std::vector<std::vector<std::unique_ptr<Pieces::Piece>>> Pieces;
   sf::Vector2<int> selectedIndex;
   sf::RenderWindow* gameWindow;

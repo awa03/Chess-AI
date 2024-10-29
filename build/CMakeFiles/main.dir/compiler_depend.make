@@ -456,7 +456,6 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
   /usr/lib/llvm-18/include/c++/v1/__charconv/traits.h \
   /usr/lib/llvm-18/include/c++/v1/__chrono/convert_to_timespec.h \
   /usr/lib/llvm-18/include/c++/v1/__chrono/duration.h \
-  /usr/lib/llvm-18/include/c++/v1/__chrono/file_clock.h \
   /usr/lib/llvm-18/include/c++/v1/__chrono/high_resolution_clock.h \
   /usr/lib/llvm-18/include/c++/v1/__chrono/statically_widen.h \
   /usr/lib/llvm-18/include/c++/v1/__chrono/steady_clock.h \
@@ -507,22 +506,6 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
   /usr/lib/llvm-18/include/c++/v1/__exception/nested_exception.h \
   /usr/lib/llvm-18/include/c++/v1/__exception/operations.h \
   /usr/lib/llvm-18/include/c++/v1/__exception/terminate.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/copy_options.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/directory_entry.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/directory_iterator.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/directory_options.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/file_status.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/file_time_type.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/file_type.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/filesystem_error.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/operations.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/path.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/path_iterator.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/perm_options.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/perms.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/recursive_directory_iterator.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/space_info.h \
-  /usr/lib/llvm-18/include/c++/v1/__filesystem/u8path.h \
   /usr/lib/llvm-18/include/c++/v1/__format/buffer.h \
   /usr/lib/llvm-18/include/c++/v1/__format/concepts.h \
   /usr/lib/llvm-18/include/c++/v1/__format/container_adaptor.h \
@@ -932,11 +915,9 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
   /usr/lib/llvm-18/include/c++/v1/errno.h \
   /usr/lib/llvm-18/include/c++/v1/exception \
   /usr/lib/llvm-18/include/c++/v1/execution \
-  /usr/lib/llvm-18/include/c++/v1/filesystem \
   /usr/lib/llvm-18/include/c++/v1/format \
   /usr/lib/llvm-18/include/c++/v1/functional \
   /usr/lib/llvm-18/include/c++/v1/initializer_list \
-  /usr/lib/llvm-18/include/c++/v1/iomanip \
   /usr/lib/llvm-18/include/c++/v1/ios \
   /usr/lib/llvm-18/include/c++/v1/iosfwd \
   /usr/lib/llvm-18/include/c++/v1/iostream \
@@ -1042,11 +1023,7 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
 
 /usr/lib/llvm-18/include/c++/v1/ios:
 
-/usr/lib/llvm-18/include/c++/v1/iomanip:
-
 /usr/lib/llvm-18/include/c++/v1/functional:
-
-/usr/lib/llvm-18/include/c++/v1/filesystem:
 
 /usr/lib/llvm-18/include/c++/v1/cwchar:
 
@@ -1124,6 +1101,8 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
 
 /usr/lib/llvm-18/include/c++/v1/__type_traits/lazy.h:
 
+/usr/lib/llvm-18/include/c++/v1/__type_traits/is_volatile.h:
+
 /usr/lib/llvm-18/include/c++/v1/__type_traits/is_void.h:
 
 /usr/lib/llvm-18/include/c++/v1/__type_traits/is_valid_expansion.h:
@@ -1165,6 +1144,8 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
 /usr/lib/llvm-18/include/c++/v1/__type_traits/is_polymorphic.h:
 
 /usr/lib/llvm-18/include/c++/v1/__type_traits/is_object.h:
+
+/usr/lib/llvm-18/include/c++/v1/__type_traits/is_null_pointer.h:
 
 /usr/lib/llvm-18/include/c++/v1/__type_traits/is_nothrow_move_constructible.h:
 
@@ -1307,6 +1288,8 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
 /usr/lib/llvm-18/include/c++/v1/__ranges/enable_view.h:
 
 /usr/lib/llvm-18/include/c++/v1/__ranges/enable_borrowed_range.h:
+
+/usr/lib/llvm-18/include/c++/v1/__ranges/empty.h:
 
 /usr/lib/llvm-18/include/c++/v1/__ranges/data.h:
 
@@ -1568,42 +1551,6 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
 
 /usr/lib/llvm-18/include/c++/v1/__functional/bind_front.h:
 
-/usr/lib/llvm-18/include/c++/v1/__functional/binary_function.h:
-
-/usr/lib/llvm-18/include/c++/v1/__format/write_escaped.h:
-
-/usr/lib/llvm-18/include/c++/v1/__split_buffer:
-
-/usr/lib/llvm-18/include/c++/v1/__format/width_estimation_table.h:
-
-/usr/lib/llvm-18/include/c++/v1/__format/unicode.h:
-
-/usr/lib/llvm-18/include/c++/v1/string.h:
-
-/usr/lib/llvm-18/include/c++/v1/__format/range_formatter.h:
-
-/usr/lib/llvm-18/include/c++/v1/__utility/unreachable.h:
-
-/usr/lib/llvm-18/include/c++/v1/__format/range_default_formatter.h:
-
-/usr/lib/llvm-18/include/c++/v1/__format/parser_std_format_spec.h:
-
-/usr/lib/llvm-18/include/c++/v1/ctime:
-
-/usr/lib/llvm-18/include/c++/v1/__memory/uses_allocator_construction.h:
-
-/usr/lib/llvm-18/include/c++/v1/__format/formatter_tuple.h:
-
-/usr/lib/llvm-18/include/c++/v1/__type_traits/is_trivially_constructible.h:
-
-/usr/lib/llvm-18/include/c++/v1/__format/formatter_integral.h:
-
-/usr/lib/llvm-18/include/c++/v1/__fwd/tuple.h:
-
-/usr/lib/llvm-18/include/c++/v1/__format/formatter_integer.h:
-
-/usr/lib/llvm-18/include/c++/v1/__format/formatter_floating_point.h:
-
 /usr/lib/llvm-18/include/c++/v1/cwctype:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
@@ -1618,7 +1565,11 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/aiden-allen/Desktop/chess-ai/src/main.
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/remove_if.h:
 
-/usr/lib/llvm-18/include/c++/v1/__filesystem/recursive_directory_iterator.h:
+/usr/lib/llvm-18/include/c++/v1/ctime:
+
+/usr/lib/llvm-18/include/c++/v1/__memory/uses_allocator_construction.h:
+
+/usr/lib/llvm-18/include/c++/v1/__format/formatter_tuple.h:
 
 /usr/lib/llvm-18/include/c++/v1/__type_traits/is_nothrow_copy_constructible.h:
 
@@ -1674,10 +1625,6 @@ _deps/sfml-src/include/SFML/Graphics/BlendMode.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/for_each.h:
 
-/usr/lib/llvm-18/include/c++/v1/__functional/bind_back.h:
-
-/usr/lib/llvm-18/include/c++/v1/__algorithm/find_if.h:
-
 /usr/lib/llvm-18/include/c++/v1/__bit/bit_floor.h:
 
 /usr/lib/llvm-18/include/c++/v1/__compare/compare_partial_order_fallback.h:
@@ -1698,10 +1645,6 @@ _deps/sfml-src/include/SFML/Graphics/BlendMode.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/equal_range.h:
 
-/usr/lib/llvm-18/include/c++/v1/__functional/bind.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
 /usr/lib/llvm-18/include/c++/v1/__algorithm/copy_backward.h:
 
 /usr/include/pthread.h:
@@ -1721,10 +1664,6 @@ _deps/sfml-src/include/SFML/System/Clock.hpp:
 _deps/sfml-src/include/SFML/Window/Vulkan.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/binary_search.h:
-
-/usr/lib/llvm-18/include/c++/v1/__ranges/empty.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/perms.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -1758,6 +1697,8 @@ _deps/sfml-src/include/SFML/Window/Vulkan.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/sift_down.h:
 
+/usr/lib/llvm-18/include/c++/v1/__format/formatter_floating_point.h:
+
 /usr/lib/llvm-18/include/c++/v1/__algorithm/in_fun_result.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/max_element.h:
@@ -1779,10 +1720,6 @@ _deps/sfml-src/include/SFML/Window/WindowHandle.hpp:
 /usr/lib/llvm-18/include/c++/v1/__exception/operations.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/partition_point.h:
-
-/usr/lib/llvm-18/include/c++/v1/__format/formatter_string.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
@@ -1822,6 +1759,8 @@ _deps/sfml-src/include/SFML/System/ThreadLocalPtr.inl:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/rotate_copy.h:
 
+/usr/lib/llvm-18/include/c++/v1/__format/write_escaped.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/lib/llvm-18/include/c++/v1/__functional/pointer_to_unary_function.h:
@@ -1842,8 +1781,6 @@ _deps/sfml-src/include/SFML/Graphics/ConvexShape.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/usr/lib/llvm-18/include/c++/v1/__filesystem/file_time_type.h:
-
 /usr/lib/llvm-18/include/c++/v1/__atomic/atomic_sync.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_is_permutation.h:
@@ -1859,8 +1796,6 @@ _deps/sfml-src/include/SFML/Graphics/ConvexShape.hpp:
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_sort.h:
 
 _deps/sfml-src/include/SFML/System/Vector2.inl:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/path_iterator.h:
 
 /usr/lib/llvm-18/include/c++/v1/__type_traits/is_nothrow_move_assignable.h:
 
@@ -2070,6 +2005,8 @@ _deps/sfml-src/include/SFML/System/Vector3.inl:
 
 _deps/sfml-src/include/SFML/Graphics/RectangleShape.hpp:
 
+/usr/lib/llvm-18/include/c++/v1/__format/unicode.h:
+
 /usr/include/stdc-predef.h:
 
 _deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp:
@@ -2115,6 +2052,8 @@ _deps/sfml-src/include/SFML/System/String.hpp:
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/lib/llvm-18/include/c++/v1/__format/parser_std_format_spec.h:
 
 _deps/sfml-src/include/SFML/Graphics/RenderWindow.hpp:
 
@@ -2186,8 +2125,6 @@ _deps/sfml-src/include/SFML/Graphics/Transform.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/usr/lib/llvm-18/include/c++/v1/__filesystem/perm_options.h:
-
 /home/aiden-allen/Desktop/chess-ai/src/include/pieces.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
@@ -2219,6 +2156,10 @@ _deps/sfml-src/include/SFML/Graphics/Transform.hpp:
 _deps/sfml-src/include/SFML/Window/Event.hpp:
 
 _deps/sfml-src/include/SFML/Graphics/Rect.inl:
+
+/usr/lib/llvm-18/include/c++/v1/__algorithm/sort_heap.h:
+
+/usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_partition_point.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
@@ -2326,15 +2267,7 @@ _deps/sfml-src/include/SFML/Graphics/Glsl.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/usr/lib/llvm-18/include/c++/v1/__math/fma.h:
-
-/usr/lib/llvm-18/include/c++/v1/__functional/binary_negate.h:
-
-/usr/lib/llvm-18/include/c++/v1/__bit/rotate.h:
-
 /usr/include/sched.h:
-
-/usr/lib/llvm-18/include/c++/v1/__chrono/file_clock.h:
 
 /usr/include/wctype.h:
 
@@ -2342,9 +2275,9 @@ _deps/sfml-src/include/SFML/Graphics/Glsl.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__iterator/distance.h:
 
-/usr/lib/llvm-18/include/c++/v1/__format/formatter_pointer.h:
-
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/llvm-18/include/c++/v1/__format/formatter_pointer.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_next_permutation.h:
 
@@ -2394,9 +2327,7 @@ _deps/sfml-src/include/SFML/Graphics/RenderTarget.hpp:
 
 _deps/sfml-src/include/SFML/Window/VideoMode.hpp:
 
-/usr/lib/llvm-18/include/c++/v1/__format/formatter_output.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
+/usr/lib/llvm-18/include/c++/v1/__algorithm/pstl_transform.h:
 
 /usr/lib/llvm-18/include/c++/v1/concepts:
 
@@ -2405,6 +2336,8 @@ _deps/sfml-src/include/SFML/Window/VideoMode.hpp:
 /usr/include/linux/errno.h:
 
 /usr/lib/llvm-18/include/c++/v1/__chrono/convert_to_timespec.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
@@ -2452,6 +2385,10 @@ _deps/sfml-src/include/SFML/Window/Cursor.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/pstl_backends/cpu_backends/transform.h:
 
+/usr/lib/llvm-18/include/c++/v1/__fwd/tuple.h:
+
+/usr/lib/llvm-18/include/c++/v1/__format/formatter_integer.h:
+
 /usr/lib/llvm-18/include/c++/v1/__algorithm/pstl_copy.h:
 
 /usr/lib/llvm-18/include/c++/v1/__type_traits/is_member_object_pointer.h:
@@ -2467,10 +2404,6 @@ _deps/sfml-src/include/SFML/Window/Cursor.hpp:
 /usr/lib/llvm-18/include/c++/v1/__random/log2.h:
 
 /usr/lib/llvm-18/include/c++/v1/__concepts/assignable.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/filesystem_error.h:
 
 /usr/lib/llvm-18/include/c++/v1/atomic:
 
@@ -2555,6 +2488,10 @@ _deps/sfml-src/include/SFML/Window/Mouse.hpp:
 /usr/lib/llvm-18/include/c++/v1/__concepts/equality_comparable.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_ends_with.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/lib/llvm-18/include/c++/v1/__format/formatter_output.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_equal.h:
 
@@ -2646,15 +2583,15 @@ _deps/sfml-src/include/SFML/Graphics/Color.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__concepts/predicate.h:
 
+/usr/lib/llvm-18/include/c++/v1/__type_traits/is_trivially_constructible.h:
+
+/usr/lib/llvm-18/include/c++/v1/__format/formatter_integral.h:
+
 /usr/lib/llvm-18/include/c++/v1/__math/inverse_hyperbolic_functions.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_pop_heap.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_prev_permutation.h:
-
-/usr/lib/llvm-18/include/c++/v1/__type_traits/is_volatile.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/file_status.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_push_heap.h:
 
@@ -2665,8 +2602,6 @@ _deps/sfml-src/include/SFML/Graphics/Color.hpp:
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_remove_if.h:
 
 /usr/lib/llvm-18/include/c++/v1/__functional/is_transparent.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/operations.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_replace.h:
 
@@ -2682,11 +2617,19 @@ _deps/sfml-src/include/SFML/Graphics/Drawable.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_replace_if.h:
 
+/usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_reverse.h:
+
 /usr/lib/llvm-18/include/c++/v1/__iterator/back_insert_iterator.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/pstl_backends/cpu_backends/merge.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_rotate.h:
+
+/usr/lib/llvm-18/include/c++/v1/__math/fma.h:
+
+/usr/lib/llvm-18/include/c++/v1/__bit/rotate.h:
+
+/usr/lib/llvm-18/include/c++/v1/__functional/binary_negate.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
@@ -2735,6 +2678,8 @@ _deps/sfml-src/include/SFML/Graphics/Drawable.hpp:
 /usr/lib/llvm-18/include/c++/v1/__type_traits/is_reference_wrapper.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/set_symmetric_difference.h:
+
+/usr/lib/llvm-18/include/c++/v1/__bit/has_single_bit.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_generate.h:
 
@@ -2912,8 +2857,6 @@ _deps/sfml-src/include/SFML/Graphics/Font.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__config_site:
 
-/usr/lib/llvm-18/include/c++/v1/__filesystem/copy_options.h:
-
 /usr/lib/llvm-18/include/c++/v1/__atomic/atomic.h:
 
 /usr/lib/llvm-18/include/c++/v1/__algorithm/pstl_rotate_copy.h:
@@ -2929,32 +2872,6 @@ _deps/sfml-src/include/SFML/Graphics/Font.hpp:
 /usr/lib/llvm-18/include/c++/v1/__compare/compare_strong_order_fallback.h:
 
 /usr/lib/llvm-18/include/c++/v1/__exception/exception_ptr.h:
-
-/usr/lib/llvm-18/include/c++/v1/__bit/has_single_bit.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/u8path.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/directory_entry.h:
-
-/usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_reverse.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/directory_iterator.h:
-
-/usr/lib/llvm-18/include/c++/v1/__algorithm/sort_heap.h:
-
-/usr/lib/llvm-18/include/c++/v1/__algorithm/ranges_partition_point.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/directory_options.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/file_type.h:
-
-/usr/lib/llvm-18/include/c++/v1/__algorithm/pstl_transform.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/path.h:
-
-/usr/lib/llvm-18/include/c++/v1/__type_traits/is_null_pointer.h:
-
-/usr/lib/llvm-18/include/c++/v1/__filesystem/space_info.h:
 
 /usr/lib/llvm-18/include/c++/v1/__format/container_adaptor.h:
 
@@ -2974,4 +2891,30 @@ _deps/sfml-src/include/SFML/Graphics/Font.hpp:
 
 /usr/lib/llvm-18/include/c++/v1/__format/format_string.h:
 
+/usr/lib/llvm-18/include/c++/v1/__algorithm/find_if.h:
+
+/usr/lib/llvm-18/include/c++/v1/__functional/bind_back.h:
+
 /usr/lib/llvm-18/include/c++/v1/__format/formatter_bool.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/lib/llvm-18/include/c++/v1/__format/formatter_string.h:
+
+/usr/lib/llvm-18/include/c++/v1/__utility/unreachable.h:
+
+/usr/lib/llvm-18/include/c++/v1/__format/range_default_formatter.h:
+
+/usr/lib/llvm-18/include/c++/v1/string.h:
+
+/usr/lib/llvm-18/include/c++/v1/__format/range_formatter.h:
+
+/usr/lib/llvm-18/include/c++/v1/__split_buffer:
+
+/usr/lib/llvm-18/include/c++/v1/__format/width_estimation_table.h:
+
+/usr/lib/llvm-18/include/c++/v1/__functional/binary_function.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/lib/llvm-18/include/c++/v1/__functional/bind.h:
