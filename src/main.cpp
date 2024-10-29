@@ -3,7 +3,8 @@
 #include "include/board.hpp"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Test");
+    sf::RenderWindow window(sf::VideoMode(1000, 1000), "Chess", sf::Style::Titlebar | sf::Style::Close);
+    window.setVerticalSyncEnabled(true);
 
     sf::Font font;
     if (!font.loadFromFile("static/fonts/ArsenalSC-Bold.ttf")) {
