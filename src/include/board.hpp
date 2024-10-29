@@ -230,14 +230,6 @@ public:
       isSelected = false;
       return;
     }
-    if(highlightRects[placeIndex.x][placeIndex.y].getFillColor() == ENEMY_HIGHLIGHT){
-      std::cout << "player captured" << std::endl;   
-    }
-    else if(highlightRects[placeIndex.x][placeIndex.y].getFillColor() != CANMOVE_HIGHLIGHT){
-      std::cout << "space invalid" << std::endl;
-      return;
-    }
-    
 
     if((isValidIndex(selectedIndex) && isValidIndex(selectedIndex) && Pieces[placeIndex.x][placeIndex.y] != nullptr) && 
       (Pieces[selectedIndex.x][selectedIndex.y]->getColor() == Pieces[placeIndex.x][placeIndex.y]->getColor())) {
@@ -246,6 +238,16 @@ public:
       highlightPossibleMoves();
       return;
     }
+    else if(highlightRects[placeIndex.x][placeIndex.y].getFillColor() == ENEMY_HIGHLIGHT){
+      std::cout << "player captured" << std::endl;   
+    }
+    else if(highlightRects[placeIndex.x][placeIndex.y].getFillColor() != CANMOVE_HIGHLIGHT){
+      std::cout << "space invalid" << std::endl;
+      return;
+    }
+    
+
+    
 
     if (isValidIndex(selectedIndex) && isValidIndex(placeIndex)) {
       Pieces[selectedIndex.x][selectedIndex.y]->hasMoved = true;
