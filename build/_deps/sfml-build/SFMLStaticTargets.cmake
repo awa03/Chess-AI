@@ -55,7 +55,7 @@ add_library(sfml-system STATIC IMPORTED)
 
 set_target_properties(sfml-system PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:pthread>;\$<LINK_ONLY:rt>"
 )
 
@@ -64,7 +64,7 @@ add_library(sfml-window STATIC IMPORTED)
 
 set_target_properties(sfml-window PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:X11>;sfml-system;\$<LINK_ONLY:OpenGL>;\$<LINK_ONLY:UDev>;\$<LINK_ONLY:dl>"
 )
 
@@ -97,7 +97,7 @@ add_library(sfml-network STATIC IMPORTED)
 
 set_target_properties(sfml-network PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include"
   INTERFACE_LINK_LIBRARIES "sfml-system"
 )
 
@@ -106,7 +106,7 @@ add_library(sfml-graphics STATIC IMPORTED)
 
 set_target_properties(sfml-graphics PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include"
   INTERFACE_LINK_LIBRARIES "sfml-window;\$<LINK_ONLY:Freetype>"
 )
 
@@ -141,7 +141,7 @@ add_library(sfml-audio STATIC IMPORTED)
 
 set_target_properties(sfml-audio PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:OpenAL::OpenAL>;sfml-system;\$<LINK_ONLY:VORBIS>;\$<LINK_ONLY:FLAC>"
 )
 
@@ -149,35 +149,35 @@ set_target_properties(sfml-audio PROPERTIES
 set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(sfml-system PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-build/lib/libsfml-system.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/aiden-allen/Desktop/chess/build/_deps/sfml-build/lib/libsfml-system.a"
   )
 
 # Import target "sfml-window" for configuration ""
 set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(sfml-window PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-build/lib/libsfml-window.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/aiden-allen/Desktop/chess/build/_deps/sfml-build/lib/libsfml-window.a"
   )
 
 # Import target "sfml-network" for configuration ""
 set_property(TARGET sfml-network APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(sfml-network PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-build/lib/libsfml-network.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/aiden-allen/Desktop/chess/build/_deps/sfml-build/lib/libsfml-network.a"
   )
 
 # Import target "sfml-graphics" for configuration ""
 set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(sfml-graphics PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-build/lib/libsfml-graphics.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/aiden-allen/Desktop/chess/build/_deps/sfml-build/lib/libsfml-graphics.a"
   )
 
 # Import target "sfml-audio" for configuration ""
 set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(sfml-audio PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-build/lib/libsfml-audio.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/aiden-allen/Desktop/chess/build/_deps/sfml-build/lib/libsfml-audio.a"
   )
 
 # This file does not depend on other imported targets which have

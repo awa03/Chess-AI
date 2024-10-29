@@ -29,7 +29,7 @@ public:
     for (int i = 0; i < ROW; i++) {
       for (int j = 0; j < COL; j++) {
         Rects[i][j] = sf::RectangleShape(sf::Vector2f(squareSize, squareSize));
-        Rects[i][j].setFillColor((i + j) % 2 == 0 ? sf::Color::White : sf::Color(80, 80, 80));
+        Rects[i][j].setFillColor((i + j) % 2 == 0 ? sf::Color::White : sf::Color(100, 100, 100));
         Rects[i][j].setPosition(j * squareSize, i * squareSize);
         highlightRects[i][j] = sf::RectangleShape(sf::Vector2f(squareSize, squareSize));
         highlightRects[i][j].setFillColor(sf::Color(0, 0, 0, 0));
@@ -43,38 +43,42 @@ public:
     auto& piece = Pieces[selectedIndex.x][selectedIndex.y];
     if (piece) {
         highlightRects[selectedIndex.x][selectedIndex.y].setFillColor(sf::Color(0, 255, 0, 50)); // Highlight selected square
+        std::vector<int> yDirVec = {-1, 1};
         if (piece->getType() == Pieces::Type::PAWN) {
-            int direction = (piece->getColor() == Pieces::Color::WHITE) ? 1 : -1; // White moves up, Black moves down
-            highlightPawnAttack(direction);
-            if (isValidIndex({selectedIndex.x + direction, selectedIndex.y}) 
-            && !(Pieces[selectedIndex.x][selectedIndex.y + 1] == nullptr) && Pieces[selectedIndex.x][selectedIndex.y + 1]->hasMoved == false){
-                highlightRects[selectedIndex.x + direction][selectedIndex.y].setFillColor(sf::Color(0, 0, 255, 50)); // Highlight forward move
-                highlightRects[selectedIndex.x + (direction * 2)][selectedIndex.y].setFillColor(sf::Color(0, 0, 255, 50)); // Highlight forward move
-                Pieces[selectedIndex.x][selectedIndex.y + 1]->hasMoved = true;
+            int xDir = (piece->getColor() == Pieces::Color::WHITE) ? 1 : -1; // White moves up, Black moves down
+            highlightAttack(xDir, yDirVec);
+            if (
+            isValidIndex({selectedIndex.x + xDir, selectedIndex.y}) 
+            && (Pieces[selectedIndex.x][selectedIndex.y]->hasMoved == false)
+            && (Pieces[selectedIndex.x + (xDir * 2)][selectedIndex.y] == nullptr)
+            ){
+                // highlightRects[selectedIndex.x + direction][selectedIndex.y].setFillColor(sf::Color(0, 0, 255, 50)); // Highlight forward move
+                highlightRects[selectedIndex.x + (xDir * 2)][selectedIndex.y].setFillColor(sf::Color(0, 0, 255, 50)); // Highlight forward move
             }
-            else if (isValidIndex({selectedIndex.x + direction, selectedIndex.y}) 
-            && (Pieces[selectedIndex.x][selectedIndex.y + 1] == nullptr)){
-                highlightRects[selectedIndex.x + direction][selectedIndex.y].setFillColor(sf::Color(0, 0, 255, 50)); // Highlight forward move
+            if (isValidIndex({selectedIndex.x + xDir, selectedIndex.y}) 
+            && (Pieces[selectedIndex.x + xDir][selectedIndex.y] == nullptr)){
+                highlightRects[selectedIndex.x + xDir][selectedIndex.y].setFillColor(sf::Color(0, 0, 255, 50)); // Highlight forward move
             }
         }
     }
   }
+
+// Maybe useful -- check if correct piece is moving
 // (Pieces[selectedIndex.x + direction][selectedIndex.y + 1]->getColor() == Pieces::Color::WHITE) == whitesMove)
 
-  void highlightPawnAttack(int& direction){
-    std::vector<int> yDir = {-1, 1};
-    for(auto& d : yDir){
-      if(highlightPawnHelper(direction, d)){
-        highlightRects[selectedIndex.x + direction][selectedIndex.y + d].setFillColor(sf::Color(255, 0, 0, 50)); // Highlight forward move
+  void highlightAttack(int xDir, std::vector<int> yDirVec){
+    int highX = selectedIndex.x + xDir;
+    for(auto yDir : yDirVec){
+      int highY = selectedIndex.y + yDir;
+      if(isValidIndex({highX, highY}) && highlightAttackHelper(highX, highY)){
+        highlightRects[highX][highY].setFillColor(sf::Color(255, 0, 0, 50)); 
       }
     }
   }
-  bool highlightPawnHelper(int& direction, int& d){
-    return (isValidIndex({selectedIndex.x + direction, selectedIndex.y + d}) 
-        && (Pieces[selectedIndex.x + direction][selectedIndex.y + d] != nullptr) 
-        // if pieces same color dont highlight
-        && (Pieces[selectedIndex.x + direction][selectedIndex.y + d]->getColor()
-        != Pieces[selectedIndex.x][selectedIndex.y]->getColor()));
+  bool highlightAttackHelper(int highX, int highY){
+    if(!isValidIndex({highX, highY})){return false;}
+    if(Pieces[highX][highY] == nullptr){return false;}
+    return (Pieces[highX][highY]->getColor() != Pieces[selectedIndex.x][selectedIndex.y]->getColor());
   }
 
   void clearHighlights() {
@@ -88,6 +92,15 @@ public:
   void selectPiece() {
     clearHighlights();
     selectedIndex = getHoveredSquare();
+    // std::cout << "Whites Move: " << Pieces[selectedIndex.x][selectedIndex.y]->getColorString() << std::endl;
+    if((
+      (!isValidIndex(selectedIndex))
+      || (Pieces[selectedIndex.x][selectedIndex.y] == nullptr)
+      || ((Pieces[selectedIndex.x][selectedIndex.y]->getColor() == Pieces::Color::WHITE) != whitesMove))
+    ){
+      isSelected = false;
+      return;
+    }
     if ((whitesMove && !isWhiteSelected()) || (!whitesMove && isWhiteSelected())) {
       isSelected = false;
       return;
@@ -120,10 +133,6 @@ public:
       return;
     }
 
-    std::cout << "Selected Color Selected: " << Pieces[selectedIndex.x][selectedIndex.y]->getColorString() << "\n";
-    std::cout << "Place Color Selected: " << placeIndex.x << ", " << placeIndex.y << "\n";
-
-
     if((isValidIndex(selectedIndex) && isValidIndex(selectedIndex) && Pieces[placeIndex.x][placeIndex.y] != nullptr) && 
       (Pieces[selectedIndex.x][selectedIndex.y]->getColor() == Pieces[placeIndex.x][placeIndex.y]->getColor())) {
       selectedIndex = placeIndex;
@@ -133,8 +142,7 @@ public:
     }
 
     if (isValidIndex(selectedIndex) && isValidIndex(placeIndex)) {
-      std::cout << "Place Color Selected 2: " << placeIndex.x << ", " << placeIndex.y << "\n";
-      std::cout << "Place Color Selected 3: " << selectedIndex.x << ", " << selectedIndex.y << "\n";
+      Pieces[selectedIndex.x][selectedIndex.y]->hasMoved = true;
       Pieces[placeIndex.x][placeIndex.y] = std::move(Pieces[selectedIndex.x][selectedIndex.y]);
       centerPiece(*Pieces[placeIndex.x][placeIndex.y]->getSprite(), placeIndex);
 

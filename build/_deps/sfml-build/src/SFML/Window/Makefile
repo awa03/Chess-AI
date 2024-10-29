@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aiden-allen/Desktop/chess-ai
+CMAKE_SOURCE_DIR = /home/aiden-allen/Desktop/chess
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aiden-allen/Desktop/chess-ai/build
+CMAKE_BINARY_DIR = /home/aiden-allen/Desktop/chess/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/aiden-allen/Desktop/chess-ai/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	cd /home/aiden-allen/Desktop/chess-ai/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/aiden-allen/Desktop/chess/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	cd /home/aiden-allen/Desktop/chess-ai/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/aiden-allen/Desktop/chess-ai/build/CPackSourceConfig.cmake
+	cd /home/aiden-allen/Desktop/chess/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/aiden-allen/Desktop/chess/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/aiden-allen/Desktop/chess-ai/build/CMakeFiles /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-build/src/SFML/Window//CMakeFiles/progress.marks
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aiden-allen/Desktop/chess-ai/build/CMakeFiles 0
+	cd /home/aiden-allen/Desktop/chess/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/aiden-allen/Desktop/chess/build/CMakeFiles /home/aiden-allen/Desktop/chess/build/_deps/sfml-build/src/SFML/Window//CMakeFiles/progress.marks
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aiden-allen/Desktop/chess/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/clean
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/preinstall
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/preinstall
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/aiden-allen/Desktop/chess/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/rule:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/rule
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/rule
 .PHONY : _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/rule
 
 # Convenience name for target.
@@ -192,7 +192,7 @@ sfml-window: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/rule
 
 # fast build rule for target.
 sfml-window/fast:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build
 .PHONY : sfml-window/fast
 
 Clipboard.o: Clipboard.cpp.o
@@ -200,7 +200,7 @@ Clipboard.o: Clipboard.cpp.o
 
 # target to build an object file
 Clipboard.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.o
 .PHONY : Clipboard.cpp.o
 
 Clipboard.i: Clipboard.cpp.i
@@ -208,7 +208,7 @@ Clipboard.i: Clipboard.cpp.i
 
 # target to preprocess a source file
 Clipboard.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.i
 .PHONY : Clipboard.cpp.i
 
 Clipboard.s: Clipboard.cpp.s
@@ -216,7 +216,7 @@ Clipboard.s: Clipboard.cpp.s
 
 # target to generate assembly for a file
 Clipboard.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.s
 .PHONY : Clipboard.cpp.s
 
 Context.o: Context.cpp.o
@@ -224,7 +224,7 @@ Context.o: Context.cpp.o
 
 # target to build an object file
 Context.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.o
 .PHONY : Context.cpp.o
 
 Context.i: Context.cpp.i
@@ -232,7 +232,7 @@ Context.i: Context.cpp.i
 
 # target to preprocess a source file
 Context.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.i
 .PHONY : Context.cpp.i
 
 Context.s: Context.cpp.s
@@ -240,7 +240,7 @@ Context.s: Context.cpp.s
 
 # target to generate assembly for a file
 Context.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.s
 .PHONY : Context.cpp.s
 
 Cursor.o: Cursor.cpp.o
@@ -248,7 +248,7 @@ Cursor.o: Cursor.cpp.o
 
 # target to build an object file
 Cursor.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.o
 .PHONY : Cursor.cpp.o
 
 Cursor.i: Cursor.cpp.i
@@ -256,7 +256,7 @@ Cursor.i: Cursor.cpp.i
 
 # target to preprocess a source file
 Cursor.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.i
 .PHONY : Cursor.cpp.i
 
 Cursor.s: Cursor.cpp.s
@@ -264,7 +264,7 @@ Cursor.s: Cursor.cpp.s
 
 # target to generate assembly for a file
 Cursor.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.s
 .PHONY : Cursor.cpp.s
 
 GlContext.o: GlContext.cpp.o
@@ -272,7 +272,7 @@ GlContext.o: GlContext.cpp.o
 
 # target to build an object file
 GlContext.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.o
 .PHONY : GlContext.cpp.o
 
 GlContext.i: GlContext.cpp.i
@@ -280,7 +280,7 @@ GlContext.i: GlContext.cpp.i
 
 # target to preprocess a source file
 GlContext.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.i
 .PHONY : GlContext.cpp.i
 
 GlContext.s: GlContext.cpp.s
@@ -288,7 +288,7 @@ GlContext.s: GlContext.cpp.s
 
 # target to generate assembly for a file
 GlContext.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.s
 .PHONY : GlContext.cpp.s
 
 GlResource.o: GlResource.cpp.o
@@ -296,7 +296,7 @@ GlResource.o: GlResource.cpp.o
 
 # target to build an object file
 GlResource.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.o
 .PHONY : GlResource.cpp.o
 
 GlResource.i: GlResource.cpp.i
@@ -304,7 +304,7 @@ GlResource.i: GlResource.cpp.i
 
 # target to preprocess a source file
 GlResource.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.i
 .PHONY : GlResource.cpp.i
 
 GlResource.s: GlResource.cpp.s
@@ -312,7 +312,7 @@ GlResource.s: GlResource.cpp.s
 
 # target to generate assembly for a file
 GlResource.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.s
 .PHONY : GlResource.cpp.s
 
 Joystick.o: Joystick.cpp.o
@@ -320,7 +320,7 @@ Joystick.o: Joystick.cpp.o
 
 # target to build an object file
 Joystick.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.o
 .PHONY : Joystick.cpp.o
 
 Joystick.i: Joystick.cpp.i
@@ -328,7 +328,7 @@ Joystick.i: Joystick.cpp.i
 
 # target to preprocess a source file
 Joystick.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.i
 .PHONY : Joystick.cpp.i
 
 Joystick.s: Joystick.cpp.s
@@ -336,7 +336,7 @@ Joystick.s: Joystick.cpp.s
 
 # target to generate assembly for a file
 Joystick.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.s
 .PHONY : Joystick.cpp.s
 
 JoystickManager.o: JoystickManager.cpp.o
@@ -344,7 +344,7 @@ JoystickManager.o: JoystickManager.cpp.o
 
 # target to build an object file
 JoystickManager.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.o
 .PHONY : JoystickManager.cpp.o
 
 JoystickManager.i: JoystickManager.cpp.i
@@ -352,7 +352,7 @@ JoystickManager.i: JoystickManager.cpp.i
 
 # target to preprocess a source file
 JoystickManager.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.i
 .PHONY : JoystickManager.cpp.i
 
 JoystickManager.s: JoystickManager.cpp.s
@@ -360,7 +360,7 @@ JoystickManager.s: JoystickManager.cpp.s
 
 # target to generate assembly for a file
 JoystickManager.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.s
 .PHONY : JoystickManager.cpp.s
 
 Keyboard.o: Keyboard.cpp.o
@@ -368,7 +368,7 @@ Keyboard.o: Keyboard.cpp.o
 
 # target to build an object file
 Keyboard.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.o
 .PHONY : Keyboard.cpp.o
 
 Keyboard.i: Keyboard.cpp.i
@@ -376,7 +376,7 @@ Keyboard.i: Keyboard.cpp.i
 
 # target to preprocess a source file
 Keyboard.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.i
 .PHONY : Keyboard.cpp.i
 
 Keyboard.s: Keyboard.cpp.s
@@ -384,7 +384,7 @@ Keyboard.s: Keyboard.cpp.s
 
 # target to generate assembly for a file
 Keyboard.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.s
 .PHONY : Keyboard.cpp.s
 
 Mouse.o: Mouse.cpp.o
@@ -392,7 +392,7 @@ Mouse.o: Mouse.cpp.o
 
 # target to build an object file
 Mouse.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.o
 .PHONY : Mouse.cpp.o
 
 Mouse.i: Mouse.cpp.i
@@ -400,7 +400,7 @@ Mouse.i: Mouse.cpp.i
 
 # target to preprocess a source file
 Mouse.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.i
 .PHONY : Mouse.cpp.i
 
 Mouse.s: Mouse.cpp.s
@@ -408,7 +408,7 @@ Mouse.s: Mouse.cpp.s
 
 # target to generate assembly for a file
 Mouse.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.s
 .PHONY : Mouse.cpp.s
 
 Sensor.o: Sensor.cpp.o
@@ -416,7 +416,7 @@ Sensor.o: Sensor.cpp.o
 
 # target to build an object file
 Sensor.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.o
 .PHONY : Sensor.cpp.o
 
 Sensor.i: Sensor.cpp.i
@@ -424,7 +424,7 @@ Sensor.i: Sensor.cpp.i
 
 # target to preprocess a source file
 Sensor.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.i
 .PHONY : Sensor.cpp.i
 
 Sensor.s: Sensor.cpp.s
@@ -432,7 +432,7 @@ Sensor.s: Sensor.cpp.s
 
 # target to generate assembly for a file
 Sensor.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.s
 .PHONY : Sensor.cpp.s
 
 SensorManager.o: SensorManager.cpp.o
@@ -440,7 +440,7 @@ SensorManager.o: SensorManager.cpp.o
 
 # target to build an object file
 SensorManager.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.o
 .PHONY : SensorManager.cpp.o
 
 SensorManager.i: SensorManager.cpp.i
@@ -448,7 +448,7 @@ SensorManager.i: SensorManager.cpp.i
 
 # target to preprocess a source file
 SensorManager.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.i
 .PHONY : SensorManager.cpp.i
 
 SensorManager.s: SensorManager.cpp.s
@@ -456,7 +456,7 @@ SensorManager.s: SensorManager.cpp.s
 
 # target to generate assembly for a file
 SensorManager.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.s
 .PHONY : SensorManager.cpp.s
 
 Touch.o: Touch.cpp.o
@@ -464,7 +464,7 @@ Touch.o: Touch.cpp.o
 
 # target to build an object file
 Touch.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.o
 .PHONY : Touch.cpp.o
 
 Touch.i: Touch.cpp.i
@@ -472,7 +472,7 @@ Touch.i: Touch.cpp.i
 
 # target to preprocess a source file
 Touch.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.i
 .PHONY : Touch.cpp.i
 
 Touch.s: Touch.cpp.s
@@ -480,7 +480,7 @@ Touch.s: Touch.cpp.s
 
 # target to generate assembly for a file
 Touch.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.s
 .PHONY : Touch.cpp.s
 
 Unix/ClipboardImpl.o: Unix/ClipboardImpl.cpp.o
@@ -488,7 +488,7 @@ Unix/ClipboardImpl.o: Unix/ClipboardImpl.cpp.o
 
 # target to build an object file
 Unix/ClipboardImpl.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/ClipboardImpl.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/ClipboardImpl.cpp.o
 .PHONY : Unix/ClipboardImpl.cpp.o
 
 Unix/ClipboardImpl.i: Unix/ClipboardImpl.cpp.i
@@ -496,7 +496,7 @@ Unix/ClipboardImpl.i: Unix/ClipboardImpl.cpp.i
 
 # target to preprocess a source file
 Unix/ClipboardImpl.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/ClipboardImpl.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/ClipboardImpl.cpp.i
 .PHONY : Unix/ClipboardImpl.cpp.i
 
 Unix/ClipboardImpl.s: Unix/ClipboardImpl.cpp.s
@@ -504,7 +504,7 @@ Unix/ClipboardImpl.s: Unix/ClipboardImpl.cpp.s
 
 # target to generate assembly for a file
 Unix/ClipboardImpl.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/ClipboardImpl.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/ClipboardImpl.cpp.s
 .PHONY : Unix/ClipboardImpl.cpp.s
 
 Unix/CursorImpl.o: Unix/CursorImpl.cpp.o
@@ -512,7 +512,7 @@ Unix/CursorImpl.o: Unix/CursorImpl.cpp.o
 
 # target to build an object file
 Unix/CursorImpl.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/CursorImpl.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/CursorImpl.cpp.o
 .PHONY : Unix/CursorImpl.cpp.o
 
 Unix/CursorImpl.i: Unix/CursorImpl.cpp.i
@@ -520,7 +520,7 @@ Unix/CursorImpl.i: Unix/CursorImpl.cpp.i
 
 # target to preprocess a source file
 Unix/CursorImpl.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/CursorImpl.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/CursorImpl.cpp.i
 .PHONY : Unix/CursorImpl.cpp.i
 
 Unix/CursorImpl.s: Unix/CursorImpl.cpp.s
@@ -528,7 +528,7 @@ Unix/CursorImpl.s: Unix/CursorImpl.cpp.s
 
 # target to generate assembly for a file
 Unix/CursorImpl.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/CursorImpl.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/CursorImpl.cpp.s
 .PHONY : Unix/CursorImpl.cpp.s
 
 Unix/Display.o: Unix/Display.cpp.o
@@ -536,7 +536,7 @@ Unix/Display.o: Unix/Display.cpp.o
 
 # target to build an object file
 Unix/Display.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/Display.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/Display.cpp.o
 .PHONY : Unix/Display.cpp.o
 
 Unix/Display.i: Unix/Display.cpp.i
@@ -544,7 +544,7 @@ Unix/Display.i: Unix/Display.cpp.i
 
 # target to preprocess a source file
 Unix/Display.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/Display.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/Display.cpp.i
 .PHONY : Unix/Display.cpp.i
 
 Unix/Display.s: Unix/Display.cpp.s
@@ -552,7 +552,7 @@ Unix/Display.s: Unix/Display.cpp.s
 
 # target to generate assembly for a file
 Unix/Display.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/Display.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/Display.cpp.s
 .PHONY : Unix/Display.cpp.s
 
 Unix/GlxContext.o: Unix/GlxContext.cpp.o
@@ -560,7 +560,7 @@ Unix/GlxContext.o: Unix/GlxContext.cpp.o
 
 # target to build an object file
 Unix/GlxContext.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/GlxContext.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/GlxContext.cpp.o
 .PHONY : Unix/GlxContext.cpp.o
 
 Unix/GlxContext.i: Unix/GlxContext.cpp.i
@@ -568,7 +568,7 @@ Unix/GlxContext.i: Unix/GlxContext.cpp.i
 
 # target to preprocess a source file
 Unix/GlxContext.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/GlxContext.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/GlxContext.cpp.i
 .PHONY : Unix/GlxContext.cpp.i
 
 Unix/GlxContext.s: Unix/GlxContext.cpp.s
@@ -576,7 +576,7 @@ Unix/GlxContext.s: Unix/GlxContext.cpp.s
 
 # target to generate assembly for a file
 Unix/GlxContext.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/GlxContext.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/GlxContext.cpp.s
 .PHONY : Unix/GlxContext.cpp.s
 
 Unix/InputImpl.o: Unix/InputImpl.cpp.o
@@ -584,7 +584,7 @@ Unix/InputImpl.o: Unix/InputImpl.cpp.o
 
 # target to build an object file
 Unix/InputImpl.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.o
 .PHONY : Unix/InputImpl.cpp.o
 
 Unix/InputImpl.i: Unix/InputImpl.cpp.i
@@ -592,7 +592,7 @@ Unix/InputImpl.i: Unix/InputImpl.cpp.i
 
 # target to preprocess a source file
 Unix/InputImpl.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.i
 .PHONY : Unix/InputImpl.cpp.i
 
 Unix/InputImpl.s: Unix/InputImpl.cpp.s
@@ -600,7 +600,7 @@ Unix/InputImpl.s: Unix/InputImpl.cpp.s
 
 # target to generate assembly for a file
 Unix/InputImpl.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.s
 .PHONY : Unix/InputImpl.cpp.s
 
 Unix/JoystickImpl.o: Unix/JoystickImpl.cpp.o
@@ -608,7 +608,7 @@ Unix/JoystickImpl.o: Unix/JoystickImpl.cpp.o
 
 # target to build an object file
 Unix/JoystickImpl.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cpp.o
 .PHONY : Unix/JoystickImpl.cpp.o
 
 Unix/JoystickImpl.i: Unix/JoystickImpl.cpp.i
@@ -616,7 +616,7 @@ Unix/JoystickImpl.i: Unix/JoystickImpl.cpp.i
 
 # target to preprocess a source file
 Unix/JoystickImpl.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cpp.i
 .PHONY : Unix/JoystickImpl.cpp.i
 
 Unix/JoystickImpl.s: Unix/JoystickImpl.cpp.s
@@ -624,7 +624,7 @@ Unix/JoystickImpl.s: Unix/JoystickImpl.cpp.s
 
 # target to generate assembly for a file
 Unix/JoystickImpl.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cpp.s
 .PHONY : Unix/JoystickImpl.cpp.s
 
 Unix/KeySymToKeyMapping.o: Unix/KeySymToKeyMapping.cpp.o
@@ -632,7 +632,7 @@ Unix/KeySymToKeyMapping.o: Unix/KeySymToKeyMapping.cpp.o
 
 # target to build an object file
 Unix/KeySymToKeyMapping.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToKeyMapping.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToKeyMapping.cpp.o
 .PHONY : Unix/KeySymToKeyMapping.cpp.o
 
 Unix/KeySymToKeyMapping.i: Unix/KeySymToKeyMapping.cpp.i
@@ -640,7 +640,7 @@ Unix/KeySymToKeyMapping.i: Unix/KeySymToKeyMapping.cpp.i
 
 # target to preprocess a source file
 Unix/KeySymToKeyMapping.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToKeyMapping.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToKeyMapping.cpp.i
 .PHONY : Unix/KeySymToKeyMapping.cpp.i
 
 Unix/KeySymToKeyMapping.s: Unix/KeySymToKeyMapping.cpp.s
@@ -648,7 +648,7 @@ Unix/KeySymToKeyMapping.s: Unix/KeySymToKeyMapping.cpp.s
 
 # target to generate assembly for a file
 Unix/KeySymToKeyMapping.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToKeyMapping.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToKeyMapping.cpp.s
 .PHONY : Unix/KeySymToKeyMapping.cpp.s
 
 Unix/KeySymToUnicodeMapping.o: Unix/KeySymToUnicodeMapping.cpp.o
@@ -656,7 +656,7 @@ Unix/KeySymToUnicodeMapping.o: Unix/KeySymToUnicodeMapping.cpp.o
 
 # target to build an object file
 Unix/KeySymToUnicodeMapping.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToUnicodeMapping.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToUnicodeMapping.cpp.o
 .PHONY : Unix/KeySymToUnicodeMapping.cpp.o
 
 Unix/KeySymToUnicodeMapping.i: Unix/KeySymToUnicodeMapping.cpp.i
@@ -664,7 +664,7 @@ Unix/KeySymToUnicodeMapping.i: Unix/KeySymToUnicodeMapping.cpp.i
 
 # target to preprocess a source file
 Unix/KeySymToUnicodeMapping.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToUnicodeMapping.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToUnicodeMapping.cpp.i
 .PHONY : Unix/KeySymToUnicodeMapping.cpp.i
 
 Unix/KeySymToUnicodeMapping.s: Unix/KeySymToUnicodeMapping.cpp.s
@@ -672,7 +672,7 @@ Unix/KeySymToUnicodeMapping.s: Unix/KeySymToUnicodeMapping.cpp.s
 
 # target to generate assembly for a file
 Unix/KeySymToUnicodeMapping.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToUnicodeMapping.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeySymToUnicodeMapping.cpp.s
 .PHONY : Unix/KeySymToUnicodeMapping.cpp.s
 
 Unix/KeyboardImpl.o: Unix/KeyboardImpl.cpp.o
@@ -680,7 +680,7 @@ Unix/KeyboardImpl.o: Unix/KeyboardImpl.cpp.o
 
 # target to build an object file
 Unix/KeyboardImpl.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cpp.o
 .PHONY : Unix/KeyboardImpl.cpp.o
 
 Unix/KeyboardImpl.i: Unix/KeyboardImpl.cpp.i
@@ -688,7 +688,7 @@ Unix/KeyboardImpl.i: Unix/KeyboardImpl.cpp.i
 
 # target to preprocess a source file
 Unix/KeyboardImpl.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cpp.i
 .PHONY : Unix/KeyboardImpl.cpp.i
 
 Unix/KeyboardImpl.s: Unix/KeyboardImpl.cpp.s
@@ -696,7 +696,7 @@ Unix/KeyboardImpl.s: Unix/KeyboardImpl.cpp.s
 
 # target to generate assembly for a file
 Unix/KeyboardImpl.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cpp.s
 .PHONY : Unix/KeyboardImpl.cpp.s
 
 Unix/SensorImpl.o: Unix/SensorImpl.cpp.o
@@ -704,7 +704,7 @@ Unix/SensorImpl.o: Unix/SensorImpl.cpp.o
 
 # target to build an object file
 Unix/SensorImpl.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/SensorImpl.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/SensorImpl.cpp.o
 .PHONY : Unix/SensorImpl.cpp.o
 
 Unix/SensorImpl.i: Unix/SensorImpl.cpp.i
@@ -712,7 +712,7 @@ Unix/SensorImpl.i: Unix/SensorImpl.cpp.i
 
 # target to preprocess a source file
 Unix/SensorImpl.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/SensorImpl.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/SensorImpl.cpp.i
 .PHONY : Unix/SensorImpl.cpp.i
 
 Unix/SensorImpl.s: Unix/SensorImpl.cpp.s
@@ -720,7 +720,7 @@ Unix/SensorImpl.s: Unix/SensorImpl.cpp.s
 
 # target to generate assembly for a file
 Unix/SensorImpl.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/SensorImpl.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/SensorImpl.cpp.s
 .PHONY : Unix/SensorImpl.cpp.s
 
 Unix/VideoModeImpl.o: Unix/VideoModeImpl.cpp.o
@@ -728,7 +728,7 @@ Unix/VideoModeImpl.o: Unix/VideoModeImpl.cpp.o
 
 # target to build an object file
 Unix/VideoModeImpl.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.cpp.o
 .PHONY : Unix/VideoModeImpl.cpp.o
 
 Unix/VideoModeImpl.i: Unix/VideoModeImpl.cpp.i
@@ -736,7 +736,7 @@ Unix/VideoModeImpl.i: Unix/VideoModeImpl.cpp.i
 
 # target to preprocess a source file
 Unix/VideoModeImpl.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.cpp.i
 .PHONY : Unix/VideoModeImpl.cpp.i
 
 Unix/VideoModeImpl.s: Unix/VideoModeImpl.cpp.s
@@ -744,7 +744,7 @@ Unix/VideoModeImpl.s: Unix/VideoModeImpl.cpp.s
 
 # target to generate assembly for a file
 Unix/VideoModeImpl.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.cpp.s
 .PHONY : Unix/VideoModeImpl.cpp.s
 
 Unix/VulkanImplX11.o: Unix/VulkanImplX11.cpp.o
@@ -752,7 +752,7 @@ Unix/VulkanImplX11.o: Unix/VulkanImplX11.cpp.o
 
 # target to build an object file
 Unix/VulkanImplX11.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.cpp.o
 .PHONY : Unix/VulkanImplX11.cpp.o
 
 Unix/VulkanImplX11.i: Unix/VulkanImplX11.cpp.i
@@ -760,7 +760,7 @@ Unix/VulkanImplX11.i: Unix/VulkanImplX11.cpp.i
 
 # target to preprocess a source file
 Unix/VulkanImplX11.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.cpp.i
 .PHONY : Unix/VulkanImplX11.cpp.i
 
 Unix/VulkanImplX11.s: Unix/VulkanImplX11.cpp.s
@@ -768,7 +768,7 @@ Unix/VulkanImplX11.s: Unix/VulkanImplX11.cpp.s
 
 # target to generate assembly for a file
 Unix/VulkanImplX11.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.cpp.s
 .PHONY : Unix/VulkanImplX11.cpp.s
 
 Unix/WindowImplX11.o: Unix/WindowImplX11.cpp.o
@@ -776,7 +776,7 @@ Unix/WindowImplX11.o: Unix/WindowImplX11.cpp.o
 
 # target to build an object file
 Unix/WindowImplX11.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/WindowImplX11.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/WindowImplX11.cpp.o
 .PHONY : Unix/WindowImplX11.cpp.o
 
 Unix/WindowImplX11.i: Unix/WindowImplX11.cpp.i
@@ -784,7 +784,7 @@ Unix/WindowImplX11.i: Unix/WindowImplX11.cpp.i
 
 # target to preprocess a source file
 Unix/WindowImplX11.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/WindowImplX11.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/WindowImplX11.cpp.i
 .PHONY : Unix/WindowImplX11.cpp.i
 
 Unix/WindowImplX11.s: Unix/WindowImplX11.cpp.s
@@ -792,7 +792,7 @@ Unix/WindowImplX11.s: Unix/WindowImplX11.cpp.s
 
 # target to generate assembly for a file
 Unix/WindowImplX11.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/WindowImplX11.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/WindowImplX11.cpp.s
 .PHONY : Unix/WindowImplX11.cpp.s
 
 VideoMode.o: VideoMode.cpp.o
@@ -800,7 +800,7 @@ VideoMode.o: VideoMode.cpp.o
 
 # target to build an object file
 VideoMode.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.o
 .PHONY : VideoMode.cpp.o
 
 VideoMode.i: VideoMode.cpp.i
@@ -808,7 +808,7 @@ VideoMode.i: VideoMode.cpp.i
 
 # target to preprocess a source file
 VideoMode.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.i
 .PHONY : VideoMode.cpp.i
 
 VideoMode.s: VideoMode.cpp.s
@@ -816,7 +816,7 @@ VideoMode.s: VideoMode.cpp.s
 
 # target to generate assembly for a file
 VideoMode.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.s
 .PHONY : VideoMode.cpp.s
 
 Vulkan.o: Vulkan.cpp.o
@@ -824,7 +824,7 @@ Vulkan.o: Vulkan.cpp.o
 
 # target to build an object file
 Vulkan.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.o
 .PHONY : Vulkan.cpp.o
 
 Vulkan.i: Vulkan.cpp.i
@@ -832,7 +832,7 @@ Vulkan.i: Vulkan.cpp.i
 
 # target to preprocess a source file
 Vulkan.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.i
 .PHONY : Vulkan.cpp.i
 
 Vulkan.s: Vulkan.cpp.s
@@ -840,7 +840,7 @@ Vulkan.s: Vulkan.cpp.s
 
 # target to generate assembly for a file
 Vulkan.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.s
 .PHONY : Vulkan.cpp.s
 
 Window.o: Window.cpp.o
@@ -848,7 +848,7 @@ Window.o: Window.cpp.o
 
 # target to build an object file
 Window.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.o
 .PHONY : Window.cpp.o
 
 Window.i: Window.cpp.i
@@ -856,7 +856,7 @@ Window.i: Window.cpp.i
 
 # target to preprocess a source file
 Window.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.i
 .PHONY : Window.cpp.i
 
 Window.s: Window.cpp.s
@@ -864,7 +864,7 @@ Window.s: Window.cpp.s
 
 # target to generate assembly for a file
 Window.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.s
 .PHONY : Window.cpp.s
 
 WindowBase.o: WindowBase.cpp.o
@@ -872,7 +872,7 @@ WindowBase.o: WindowBase.cpp.o
 
 # target to build an object file
 WindowBase.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.o
 .PHONY : WindowBase.cpp.o
 
 WindowBase.i: WindowBase.cpp.i
@@ -880,7 +880,7 @@ WindowBase.i: WindowBase.cpp.i
 
 # target to preprocess a source file
 WindowBase.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.i
 .PHONY : WindowBase.cpp.i
 
 WindowBase.s: WindowBase.cpp.s
@@ -888,7 +888,7 @@ WindowBase.s: WindowBase.cpp.s
 
 # target to generate assembly for a file
 WindowBase.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.s
 .PHONY : WindowBase.cpp.s
 
 WindowImpl.o: WindowImpl.cpp.o
@@ -896,7 +896,7 @@ WindowImpl.o: WindowImpl.cpp.o
 
 # target to build an object file
 WindowImpl.cpp.o:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.o
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.o
 .PHONY : WindowImpl.cpp.o
 
 WindowImpl.i: WindowImpl.cpp.i
@@ -904,7 +904,7 @@ WindowImpl.i: WindowImpl.cpp.i
 
 # target to preprocess a source file
 WindowImpl.cpp.i:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.i
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.i
 .PHONY : WindowImpl.cpp.i
 
 WindowImpl.s: WindowImpl.cpp.s
@@ -912,7 +912,7 @@ WindowImpl.s: WindowImpl.cpp.s
 
 # target to generate assembly for a file
 WindowImpl.cpp.s:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.s
+	cd /home/aiden-allen/Desktop/chess/build && $(MAKE) $(MAKESILENT) -f _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.s
 .PHONY : WindowImpl.cpp.s
 
 # Help Target
@@ -1031,6 +1031,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/aiden-allen/Desktop/chess-ai/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/aiden-allen/Desktop/chess/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
