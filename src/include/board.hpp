@@ -9,7 +9,8 @@
 
 
 #define ENEMY_HIGHLIGHT sf::Color(255, 0, 0, 50)
-#define FRIEND_HIGHLIGHT sf::Color(0, 0, 255, 50)
+#define CANMOVE_HIGHLIGHT sf::Color(0, 0, 255, 50)
+#define SELECTED_HIGHLIGHT sf::Color(0, 255, 0, 50)
 
 class Board {
 public:
@@ -46,7 +47,7 @@ public:
     std::cout << "Highlighting: " << selectedIndex.x << ", " << selectedIndex.y << "\n";
     auto& piece = Pieces[selectedIndex.x][selectedIndex.y];
     if (piece) {
-      highlightRects[selectedIndex.x][selectedIndex.y].setFillColor(sf::Color(0, 255, 0, 50)); // Highlight selected square
+      highlightRects[selectedIndex.x][selectedIndex.y].setFillColor(SELECTED_HIGHLIGHT); // Highlight selected square
       std::vector<int> yDirVec = {-1, 1};
       int xDir = (piece->getColor() == Pieces::Color::WHITE) ? 1 : -1; // White moves up, Black moves down
       switch(piece->getType()){
@@ -58,12 +59,23 @@ public:
 
         case Pieces::Type::ROOK:
           highlightRookPossibleMoves();
+          break;
 
         case Pieces::Type::BISHOP:
           hightlightBishopPossibleMoves();
+          break;
 
         case Pieces::Type::QUEEN:
           highlightQueenPossibleMoves();
+          break;
+
+        case Pieces::Type::KING:
+          highlightKingPossibleMoves();
+          break;
+
+        case Pieces::Type::KNIGHT:
+          highlightKnightPossibleMoves();
+          break;
 
         default:
           break;
@@ -73,7 +85,39 @@ public:
 
   // Maybe useful -- check if correct piece is moving
   // (Pieces[selectedIndex.x + direction][selectedIndex.y + 1]->getColor() == Pieces::Color::WHITE) == whitesMove)
+
+
+  void highlightKnightPossibleMoves(){
+    // up
+    highlightDepthOne(2, 1);
+    highlightDepthOne(2, -1);
+
+    // down
+    highlightDepthOne(-2, 1);
+    highlightDepthOne(-2, -1);
+
+    // right
+    highlightDepthOne(1, 2);
+    highlightDepthOne(-1, 2);
+
+    // left
+    highlightDepthOne(1, -2);
+    highlightDepthOne(-1, -2);
+
+
+  }
   
+  void highlightKingPossibleMoves(){
+    highlightDepthOne(1, 0);
+    highlightDepthOne(-1, 0);
+    highlightDepthOne(0, 1);
+    highlightDepthOne(0, -1);
+    highlightDepthOne(-1, 1);
+    highlightDepthOne(-1, -1);
+    highlightDepthOne(1, -1);
+    highlightDepthOne(1, 1);
+  }
+
   void hightlightBishopPossibleMoves(){
     hightlightAllAvailableDiagnal();
   }
@@ -109,7 +153,7 @@ public:
       auto& piece = Pieces[selectedIndex.x + xOff][selectedIndex.y + yOff];
       auto& highRect = highlightRects[selectedIndex.x + xOff][selectedIndex.y + yOff];
       if(piece == nullptr){
-        highRect.setFillColor(FRIEND_HIGHLIGHT); 
+        highRect.setFillColor(CANMOVE_HIGHLIGHT); 
       }
       else if((piece->getColor() == Pieces::Color::WHITE) != isWhiteSelected()){
         highRect.setFillColor(ENEMY_HIGHLIGHT);
@@ -120,6 +164,18 @@ public:
       }
       xOff+=x;
       yOff+= y;
+    }
+  }
+
+  void highlightDepthOne(int xOff, int yOff){
+    if(!isValidIndex({selectedIndex.x + xOff, selectedIndex.y +yOff})) return; 
+    auto& piece = Pieces[selectedIndex.x + xOff][selectedIndex.y + yOff];
+    auto& highRect = highlightRects[selectedIndex.x + xOff][selectedIndex.y + yOff];
+    if(piece == nullptr){
+      highRect.setFillColor(CANMOVE_HIGHLIGHT); 
+    }
+    else if((piece->getColor() == Pieces::Color::WHITE) != isWhiteSelected()){
+      highRect.setFillColor(ENEMY_HIGHLIGHT);
     }
   }
 
@@ -174,6 +230,14 @@ public:
       isSelected = false;
       return;
     }
+    if(highlightRects[placeIndex.x][placeIndex.y].getFillColor() == ENEMY_HIGHLIGHT){
+      std::cout << "player captured" << std::endl;   
+    }
+    else if(highlightRects[placeIndex.x][placeIndex.y].getFillColor() != CANMOVE_HIGHLIGHT){
+      std::cout << "space invalid" << std::endl;
+      return;
+    }
+    
 
     if((isValidIndex(selectedIndex) && isValidIndex(selectedIndex) && Pieces[placeIndex.x][placeIndex.y] != nullptr) && 
       (Pieces[selectedIndex.x][selectedIndex.y]->getColor() == Pieces[placeIndex.x][placeIndex.y]->getColor())) {
@@ -352,11 +416,11 @@ private:
       && (Pieces[selectedIndex.x + (xDir * 2)][selectedIndex.y] == nullptr)
       && (Pieces[selectedIndex.x + xDir][selectedIndex.y] == nullptr)
     ){
-      highlightRects[selectedIndex.x + (xDir * 2)][selectedIndex.y].setFillColor(FRIEND_HIGHLIGHT); // Highlight forward move
+      highlightRects[selectedIndex.x + (xDir * 2)][selectedIndex.y].setFillColor(CANMOVE_HIGHLIGHT); // Highlight forward move
     }
     if (isValidIndex({selectedIndex.x + xDir, selectedIndex.y}) 
       && (Pieces[selectedIndex.x + xDir][selectedIndex.y] == nullptr)){
-      highlightRects[selectedIndex.x + xDir][selectedIndex.y].setFillColor(FRIEND_HIGHLIGHT); // Highlight forward move
+      highlightRects[selectedIndex.x + xDir][selectedIndex.y].setFillColor(CANMOVE_HIGHLIGHT); // Highlight forward move
     }
   }
   void highlightPawnAttack(int xDir, std::vector<int> yDirVec){
