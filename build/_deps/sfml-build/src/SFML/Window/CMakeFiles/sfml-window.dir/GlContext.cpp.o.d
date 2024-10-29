@@ -1,15 +1,15 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/GlContext.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/GlContext.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Context.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/ThreadLocal.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/GlContext.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/GlContext.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Context.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/ThreadLocal.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/cstdlib \
   /usr/lib/llvm-18/bin/../include/c++/v1/__assert \
   /usr/lib/llvm-18/bin/../include/c++/v1/__assertion_handler \
@@ -64,10 +64,10 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.o: \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.inl \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Mutex.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Lock.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.inl \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Mutex.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Lock.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Err.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/ostream \
   /usr/lib/llvm-18/bin/../include/c++/v1/__exception/operations.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/cstddef \
@@ -883,12 +883,12 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.o: \
   /usr/lib/llvm-18/bin/../include/c++/v1/__format/formatter_string.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__format/formatter_tuple.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/print /usr/include/unistd.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/extlibs/headers/glad/include/glad/gl.h \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/extlibs/headers/glad/include/glad/gl.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/set \
   /usr/lib/llvm-18/bin/../include/c++/v1/__tree \
   /usr/lib/llvm-18/bin/../include/c++/v1/cassert /usr/include/assert.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/GlxContext.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/extlibs/headers/glad/include/glad/glx.h \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/GlxContext.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/extlibs/headers/glad/include/glad/glx.h \
   /usr/include/X11/X.h /usr/include/X11/Xlib.h \
   /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
   /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \

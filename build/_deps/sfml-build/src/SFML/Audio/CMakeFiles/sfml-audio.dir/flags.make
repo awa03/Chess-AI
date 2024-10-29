@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC
 
-CXX_INCLUDES = -I/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src -isystem /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include -isystem /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem /usr/include/AL
+CXX_INCLUDES = -I/home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src -isystem /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include -isystem /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem /usr/include/AL
 
 CXX_FLAGS = -stdlib=libc++ -fvisibility=hidden
 

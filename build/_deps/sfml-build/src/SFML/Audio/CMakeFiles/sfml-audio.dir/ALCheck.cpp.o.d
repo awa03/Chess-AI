@@ -1,10 +1,10 @@
 _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Audio/ALCheck.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Audio/ALCheck.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Audio/ALCheck.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Audio/ALCheck.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
   /usr/include/AL/al.h /usr/include/AL/alc.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Err.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Export.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/ostream \
   /usr/lib/llvm-18/bin/../include/c++/v1/__assert \
   /usr/lib/llvm-18/bin/../include/c++/v1/__assertion_handler \
@@ -874,7 +874,7 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o: \
   /usr/lib/llvm-18/bin/../include/c++/v1/__format/formatter_string.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__format/formatter_tuple.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/print /usr/include/unistd.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/ThreadLocal.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.inl
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/ThreadLocal.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.inl

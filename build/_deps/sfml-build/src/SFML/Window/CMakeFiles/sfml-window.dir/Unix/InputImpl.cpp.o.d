@@ -1,17 +1,17 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/InputImpl.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Window.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/WindowBase.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Cursor.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/InputImpl.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Window.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/WindowBase.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Cursor.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/vector \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/copy.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/copy_move_common.h \
@@ -831,20 +831,20 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.o
   /usr/lib/llvm-18/bin/../include/c++/v1/cstdarg \
   /usr/lib/llvm-18/bin/../include/c++/v1/__memory/temp_value.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__split_buffer \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/WindowStyle.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Clock.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Time.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/String.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Utf.inl \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/String.inl \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/InputImpl.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Mouse.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/Display.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/WindowStyle.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Clock.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Time.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/String.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Utf.inl \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/String.inl \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/InputImpl.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Mouse.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/Display.hpp \
   /usr/include/X11/Xlib.h /usr/include/X11/X.h \
   /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/KeyboardImpl.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/KeyboardImpl.hpp \
   /usr/include/X11/keysym.h /usr/include/X11/keysymdef.h

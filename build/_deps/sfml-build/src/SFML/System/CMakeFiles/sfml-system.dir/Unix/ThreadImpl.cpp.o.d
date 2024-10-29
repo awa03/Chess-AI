@@ -1,9 +1,9 @@
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/System/Unix/ThreadImpl.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/System/Unix/ThreadImpl.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/System/Unix/ThreadImpl.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/System/Unix/ThreadImpl.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Export.hpp \
   /usr/include/pthread.h /usr/include/features.h \
   /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -48,7 +48,7 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Err.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/ostream \
   /usr/lib/llvm-18/bin/../include/c++/v1/__assert \
   /usr/lib/llvm-18/bin/../include/c++/v1/__assertion_handler \
@@ -874,8 +874,8 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /usr/lib/llvm-18/bin/../include/c++/v1/__format/formatter_string.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__format/formatter_tuple.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/print /usr/include/unistd.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Thread.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Thread.inl \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Thread.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Thread.inl \
   /usr/lib/llvm-18/bin/../include/c++/v1/iostream \
   /usr/lib/llvm-18/bin/../include/c++/v1/istream \
   /usr/lib/llvm-18/bin/../include/c++/v1/cassert /usr/include/assert.h

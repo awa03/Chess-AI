@@ -1,9 +1,9 @@
 _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Graphics/GLCheck.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Graphics/GLCheck.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Graphics/GLExtensions.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/extlibs/headers/glad/include/glad/gl.h \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Graphics/GLCheck.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Graphics/GLCheck.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Graphics/GLExtensions.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/extlibs/headers/glad/include/glad/gl.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/stdint.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__config \
   /usr/lib/llvm-18/bin/../include/c++/v1/__config_site \
@@ -23,8 +23,8 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o: \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Err.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Export.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/ostream \
   /usr/lib/llvm-18/bin/../include/c++/v1/__assert \
   /usr/lib/llvm-18/bin/../include/c++/v1/__assertion_handler \

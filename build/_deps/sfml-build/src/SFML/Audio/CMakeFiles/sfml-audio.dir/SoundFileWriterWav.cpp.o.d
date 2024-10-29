@@ -1,9 +1,9 @@
 _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterWav.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterWav.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/SoundFileWriter.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterWav.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterWav.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Audio/SoundFileWriter.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/string \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/max.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/comp.h \
@@ -895,6 +895,6 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp
   /usr/lib/llvm-18/bin/../include/c++/v1/__filesystem/path_iterator.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__filesystem/u8path.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Err.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Export.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/cassert /usr/include/assert.h

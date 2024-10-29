@@ -1,10 +1,10 @@
 _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Audio/OutputSoundFile.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/OutputSoundFile.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Audio/OutputSoundFile.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Audio/OutputSoundFile.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Export.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/string \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/max.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/comp.h \
@@ -766,8 +766,8 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o:
   /usr/lib/llvm-18/bin/../include/c++/v1/__bit/byteswap.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__bit/endian.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__bit/has_single_bit.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/SoundFileWriter.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/SoundFileFactory.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Audio/SoundFileWriter.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Audio/SoundFileFactory.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/vector \
   /usr/lib/llvm-18/bin/../include/c++/v1/__bit_reference \
   /usr/lib/llvm-18/bin/../include/c++/v1/__format/formatter.h \
@@ -826,4 +826,4 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o:
   /usr/lib/llvm-18/bin/../include/c++/v1/cstdarg \
   /usr/lib/llvm-18/bin/../include/c++/v1/__memory/temp_value.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__split_buffer \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/SoundFileFactory.inl
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Audio/SoundFileFactory.inl

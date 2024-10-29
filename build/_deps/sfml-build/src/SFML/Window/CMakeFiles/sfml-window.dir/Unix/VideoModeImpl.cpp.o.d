@@ -1,9 +1,9 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/VideoModeImpl.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/VideoModeImpl.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/VideoModeImpl.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/VideoModeImpl.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/vector \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/copy.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/copy_move_common.h \
@@ -823,11 +823,11 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.c
   /usr/lib/llvm-18/bin/../include/c++/v1/cstdarg \
   /usr/lib/llvm-18/bin/../include/c++/v1/__memory/temp_value.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__split_buffer \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/Display.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/Display.hpp \
   /usr/include/X11/Xlib.h /usr/include/X11/X.h \
   /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Err.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Export.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/ostream \
   /usr/lib/llvm-18/bin/../include/c++/v1/bitset \
   /usr/lib/llvm-18/bin/../include/c++/v1/format \

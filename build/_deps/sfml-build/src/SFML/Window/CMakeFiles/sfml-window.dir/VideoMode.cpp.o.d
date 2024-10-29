@@ -1,8 +1,8 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/VideoMode.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/VideoMode.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/vector \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/copy.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/copy_move_common.h \
@@ -822,7 +822,7 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.o: \
   /usr/lib/llvm-18/bin/../include/c++/v1/cstdarg \
   /usr/lib/llvm-18/bin/../include/c++/v1/__memory/temp_value.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__split_buffer \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/VideoModeImpl.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/VideoModeImpl.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/functional \
   /usr/lib/llvm-18/bin/../include/c++/v1/__functional/binary_negate.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__functional/bind.h \

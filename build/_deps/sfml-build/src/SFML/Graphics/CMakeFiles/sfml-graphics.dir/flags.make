@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = -DSFML_STATIC -DSTBI_FAILURE_USERMSG
 
-CXX_INCLUDES = -I/home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src -isystem /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include -isystem /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/extlibs/headers/stb_image -isystem /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/extlibs/headers/glad/include -isystem /usr/include/freetype2
+CXX_INCLUDES = -I/home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src -isystem /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include -isystem /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/extlibs/headers/stb_image -isystem /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/extlibs/headers/glad/include -isystem /usr/include/freetype2
 
 CXX_FLAGS = -stdlib=libc++ -fvisibility=hidden
 

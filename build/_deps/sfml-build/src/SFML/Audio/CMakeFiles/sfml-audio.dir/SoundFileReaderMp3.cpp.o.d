@@ -1,6 +1,6 @@
 _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderMp3.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/extlibs/headers/minimp3/minimp3_ex.h \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderMp3.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/extlibs/headers/minimp3/minimp3_ex.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/stddef.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__config \
   /usr/lib/llvm-18/bin/../include/c++/v1/__config_site \
@@ -19,7 +19,7 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_nullptr_t.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_max_align_t.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_offsetof.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/extlibs/headers/minimp3/minimp3.h \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/extlibs/headers/minimp3/minimp3.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/stdint.h \
   /usr/lib/llvm-18/lib/clang/18/include/stdint.h /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -166,10 +166,10 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderMp3.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/SoundFileReader.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderMp3.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Audio/SoundFileReader.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/string \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/max.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/comp.h \
@@ -921,9 +921,9 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp
   /usr/lib/llvm-18/bin/../include/c++/v1/cstdarg \
   /usr/lib/llvm-18/bin/../include/c++/v1/__memory/temp_value.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__split_buffer \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/InputStream.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/InputStream.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Err.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/ostream \
   /usr/lib/llvm-18/bin/../include/c++/v1/bitset \
   /usr/lib/llvm-18/bin/../include/c++/v1/format \

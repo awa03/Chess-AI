@@ -1,9 +1,9 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cpp.o: \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/KeyboardImpl.cpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/KeyboardImpl.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/Config.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/KeyboardImpl.cpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/KeyboardImpl.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/Config.hpp \
   /usr/include/X11/Xlib.h /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/include/features.h /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -49,7 +49,7 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cp
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_nullptr_t.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_max_align_t.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stddef_offsetof.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/Display.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/Display.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/string \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/max.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__algorithm/comp.h \
@@ -768,11 +768,11 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cp
   /usr/lib/llvm-18/bin/../include/c++/v1/__bit/byteswap.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__bit/endian.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/__bit/has_single_bit.h \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/KeySymToKeyMapping.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/src/SFML/Window/Unix/KeySymToUnicodeMapping.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/String.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Export.hpp \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/KeySymToKeyMapping.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/src/SFML/Window/Unix/KeySymToUnicodeMapping.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/String.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
   /usr/lib/llvm-18/bin/../include/c++/v1/locale \
   /usr/lib/llvm-18/bin/../include/c++/v1/__locale \
   /usr/lib/llvm-18/bin/../include/c++/v1/__mutex/once_flag.h \
@@ -804,8 +804,8 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cp
   /usr/lib/llvm-18/lib/clang/18/include/__stdarg___va_copy.h \
   /usr/lib/llvm-18/lib/clang/18/include/__stdarg_va_copy.h \
   /usr/lib/llvm-18/bin/../include/c++/v1/cstdarg \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/Utf.inl \
-  /home/aiden-allen/Desktop/chess-ai/build/_deps/sfml-src/include/SFML/System/String.inl \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/Utf.inl \
+  /home/aiden-allen/Desktop/chess/build/_deps/sfml-src/include/SFML/System/String.inl \
   /usr/include/X11/keysym.h /usr/include/X11/keysymdef.h \
   /usr/include/X11/XKBlib.h /usr/include/X11/extensions/XKBstr.h \
   /usr/include/X11/extensions/XKB.h \
