@@ -9,6 +9,7 @@
 
 
 #define ENEMY_HIGHLIGHT sf::Color(255, 0, 0, 50)
+#define CHECK_HIGHLIGHT sf::Color(255, 100, 255, 100)
 #define CANMOVE_HIGHLIGHT sf::Color(0, 0, 255, 50)
 #define SELECTED_HIGHLIGHT sf::Color(0, 255, 0, 50)
 
@@ -50,6 +51,7 @@ public:
       highlightRects[selectedIndex.x][selectedIndex.y].setFillColor(SELECTED_HIGHLIGHT); // Highlight selected square
       std::vector<int> yDirVec = {-1, 1};
       int xDir = (piece->getColor() == Pieces::Color::WHITE) ? 1 : -1; // White moves up, Black moves down
+      isInCheck(getKingPosition(getPlayerColor()));
       switch(piece->getType()){
 
         case Pieces::Type::PAWN:
@@ -83,102 +85,155 @@ public:
     }
   }
 
+  Pieces::Color getPlayerColor(){
+    return (isWhiteSelected())? Pieces::Color::WHITE : Pieces::Color::BLACK;
+  }
+
+  // Check if the current players king is in check
+  // Will find from the kings relative position if
+  // any pieces are within scope for an attack
+bool isInCheck(sf::Vector2<int> kingPos){
+    // TODO:
+    // Refactor so we keep track of kings position
+    // This will optimize the efficency of this function
+    // Reducing the time complexity by 64 operations
+    
+    Pieces::Color playerColor = getPlayerColor();
+
+    // error if index invalid for king pos
+    // should be impossible for this condition to run...
+    if(kingPos.x == -1 || kingPos.y == -1){
+      std::cerr << "error: king position not found" << std::endl;
+      throw 404;
+    }
+
+    bool checkFlag = false;
+    if(checkDiagonal(kingPos, playerColor)){
+      std::cerr << "in check diagonal" << std::endl;
+      checkFlag = true;
+    }
+    if(checkStraight(kingPos, playerColor)){
+      std::cerr << "in check straight" << std::endl;
+      checkFlag = true;
+    }
+    
+    // if(checkKnights(kingPos)) {
+    //   std::cerr << "in check by knight" << std::endl;
+    // }
+
+    return checkFlag;
+  }
+
+  bool checkStraight(sf::Vector2<int> kingPos, Pieces::Color c){
+    bool inCheckFlag = checkDiagonalHelper({1, 0}, kingPos, c);
+    if(checkStraightHelper({0, 1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkStraightHelper({-1, 0}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkStraightHelper({0, -1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    return inCheckFlag;
+  }
+
+  bool checkStraightHelper(sf::Vector2<int> off, sf::Vector2<int> kingPos, Pieces::Color c){
+    int depth = 0;
+    auto checkPos = kingPos + off;
+    bool flag = false;
+    while(isValidIndex(checkPos)){
+      if(isSameColor(checkPos, c)) return false;
+      if(checkPosition(checkPos, c)){
+        auto& piece = Pieces[checkPos.x][checkPos.y];
+        if(piece->getType() == Pieces::Type::KING && depth == 0){
+          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          flag = true;
+        }
+        else if(piece->getType() == Pieces::Type::QUEEN){
+          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          flag = true;
+        }
+        else if(piece->getType() == Pieces::Type::ROOK){
+          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          flag = true;
+        }
+        return flag;
+      }
+      checkPos += off;
+      depth++;
+    }
+    return flag;
+  }
+
+  bool checkDiagonal(sf::Vector2<int> kingPos, Pieces::Color c){
+    // TODO: Make one return -- my brain doesnt want to deal with this rn
+    bool inCheckFlag = checkDiagonalHelper({1, 1}, kingPos, c);
+    if(checkDiagonalHelper({1, -1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkDiagonalHelper({-1, 1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkDiagonalHelper({-1, -1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    return inCheckFlag;
+  }
+
+  bool checkDiagonalHelper(sf::Vector2<int> off, sf::Vector2<int> kingPos, Pieces::Color c){
+    int depth = 0;
+    bool flag = false;
+    auto checkPos = kingPos + off;
+    while(isValidIndex(checkPos)){
+      if(isSameColor(checkPos, c)) return false;
+      if(checkPosition(checkPos, c)){
+        auto& piece = Pieces[checkPos.x][checkPos.y];
+        if(piece->getType() == Pieces::Type::PAWN && depth == 0){
+          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          flag = true;
+        }
+        if(piece->getType() == Pieces::Type::KING && depth == 0){
+          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          flag = true;
+        }
+        else if(piece->getType() == Pieces::Type::QUEEN){
+          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          flag = true;
+        }
+        else if(piece->getType() == Pieces::Type::BISHOP){
+          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          flag = true;
+        }
+        return flag;
+      }
+      checkPos += off;
+      depth++;
+    }
+    return flag;
+  }
+
+  bool isSameColor(sf::Vector2<int> pieceIndex, Pieces::Color c){
+    if(Pieces[pieceIndex.x][pieceIndex.y] == nullptr) return false;
+    else return Pieces[pieceIndex.x][pieceIndex.y]->getColor() == c;
+  }
+
+  // Working as expected
+  // find the kings position within a 2d array
+  // This will be deprecated soon for performance
+  // Reduce O(m * n) to O(1)
+  sf::Vector2<int> getKingPosition(Pieces::Color playerColor){
+    for(int rowIndex = 0; rowIndex < ROW; rowIndex++){
+      for(int colIndex =0; colIndex < COL; colIndex++){
+        if(Pieces[rowIndex][colIndex] != nullptr && 
+          Pieces[rowIndex][colIndex]->getColor() == playerColor &&
+          Pieces[rowIndex][colIndex]->getType() == Pieces::Type::KING){
+          return {rowIndex, colIndex};
+        }
+      }
+    }
+    return {-1, -1};
+  }
+
+  // Check to see if the kings in check helper
+  // Used to see if an offset from the kings position
+  // has an enemy on the tile 
+  bool checkPosition(sf::Vector2<int> newPos, Pieces::Color c){
+    if(!isValidIndex(newPos)) return false;
+    if(Pieces[newPos.x][newPos.y] == nullptr) return false;
+    return true;
+  }
+
   // Maybe useful -- check if correct piece is moving
   // (Pieces[selectedIndex.x + direction][selectedIndex.y + 1]->getColor() == Pieces::Color::WHITE) == whitesMove)
-
-
-  void highlightKnightPossibleMoves(){
-    // up
-    highlightDepthOne(2, 1);
-    highlightDepthOne(2, -1);
-
-    // down
-    highlightDepthOne(-2, 1);
-    highlightDepthOne(-2, -1);
-
-    // right
-    highlightDepthOne(1, 2);
-    highlightDepthOne(-1, 2);
-
-    // left
-    highlightDepthOne(1, -2);
-    highlightDepthOne(-1, -2);
-
-
-  }
-  
-  void highlightKingPossibleMoves(){
-    highlightDepthOne(1, 0);
-    highlightDepthOne(-1, 0);
-    highlightDepthOne(0, 1);
-    highlightDepthOne(0, -1);
-    highlightDepthOne(-1, 1);
-    highlightDepthOne(-1, -1);
-    highlightDepthOne(1, -1);
-    highlightDepthOne(1, 1);
-  }
-
-  void hightlightBishopPossibleMoves(){
-    hightlightAllAvailableDiagnal();
-  }
-
-  void highlightQueenPossibleMoves(){
-    hightlightAllAvailableDiagnal();
-    highlightAllAvailableStraight();
-  }
-
-  void highlightRookPossibleMoves(){ 
-    highlightAllAvailableStraight();
-  }
-
-  void hightlightAllAvailableDiagnal(){
-    highlightAvailableStraightHelper(1, 1); 
-    highlightAvailableStraightHelper(-1, -1); 
-    highlightAvailableStraightHelper(-1, 1); 
-    highlightAvailableStraightHelper(1, -1); 
-
-  }
-
-  void highlightAllAvailableStraight() {
-    highlightAvailableStraightHelper(1, 0); 
-    highlightAvailableStraightHelper(-1, 0); 
-    highlightAvailableStraightHelper(0, 1); 
-    highlightAvailableStraightHelper(0, -1); 
-  }
-
-  void highlightAvailableStraightHelper(int x, int y){
-    int xOff = x;
-    int yOff = y;
-    while(isValidIndex({selectedIndex.x + xOff, selectedIndex.y +yOff})){
-      auto& piece = Pieces[selectedIndex.x + xOff][selectedIndex.y + yOff];
-      auto& highRect = highlightRects[selectedIndex.x + xOff][selectedIndex.y + yOff];
-      if(piece == nullptr){
-        highRect.setFillColor(CANMOVE_HIGHLIGHT); 
-      }
-      else if((piece->getColor() == Pieces::Color::WHITE) != isWhiteSelected()){
-        highRect.setFillColor(ENEMY_HIGHLIGHT);
-        break;
-      }
-      else {
-        break;
-      }
-      xOff+=x;
-      yOff+= y;
-    }
-  }
-
-  void highlightDepthOne(int xOff, int yOff){
-    if(!isValidIndex({selectedIndex.x + xOff, selectedIndex.y +yOff})) return; 
-    auto& piece = Pieces[selectedIndex.x + xOff][selectedIndex.y + yOff];
-    auto& highRect = highlightRects[selectedIndex.x + xOff][selectedIndex.y + yOff];
-    if(piece == nullptr){
-      highRect.setFillColor(CANMOVE_HIGHLIGHT); 
-    }
-    else if((piece->getColor() == Pieces::Color::WHITE) != isWhiteSelected()){
-      highRect.setFillColor(ENEMY_HIGHLIGHT);
-    }
-  }
-
   void clearHighlights() {
     for (int i = 0; i < ROW; i++) {
       for (int j = 0; j < COL; j++) {
@@ -440,6 +495,99 @@ private:
     if(Pieces[highX][highY] == nullptr){return false;}
     return (Pieces[highX][highY]->getColor() != Pieces[selectedIndex.x][selectedIndex.y]->getColor());
   }
+
+
+  void highlightKnightPossibleMoves(){
+    // up
+    highlightDepthOne(2, 1);
+    highlightDepthOne(2, -1);
+
+    // down
+    highlightDepthOne(-2, 1);
+    highlightDepthOne(-2, -1);
+
+    // right
+    highlightDepthOne(1, 2);
+    highlightDepthOne(-1, 2);
+
+    // left
+    highlightDepthOne(1, -2);
+    highlightDepthOne(-1, -2);
+
+
+  }
+  
+  void highlightKingPossibleMoves(){
+    highlightDepthOne(1, 0);
+    highlightDepthOne(-1, 0);
+    highlightDepthOne(0, 1);
+    highlightDepthOne(0, -1);
+    highlightDepthOne(-1, 1);
+    highlightDepthOne(-1, -1);
+    highlightDepthOne(1, -1);
+    highlightDepthOne(1, 1);
+  }
+
+  void hightlightBishopPossibleMoves(){
+    hightlightAllAvailableDiagonal();
+  }
+
+  void highlightQueenPossibleMoves(){
+    hightlightAllAvailableDiagonal();
+    highlightAllAvailableStraight();
+  }
+
+  void highlightRookPossibleMoves(){ 
+    highlightAllAvailableStraight();
+  }
+
+  void hightlightAllAvailableDiagonal(){
+    highlightAvailableStraightHelper(1, 1); 
+    highlightAvailableStraightHelper(-1, -1); 
+    highlightAvailableStraightHelper(-1, 1); 
+    highlightAvailableStraightHelper(1, -1); 
+  }
+
+  void highlightAllAvailableStraight() {
+    highlightAvailableStraightHelper(1, 0); 
+    highlightAvailableStraightHelper(-1, 0); 
+    highlightAvailableStraightHelper(0, 1); 
+    highlightAvailableStraightHelper(0, -1); 
+  }
+
+  void highlightAvailableStraightHelper(int x, int y){
+    int xOff = x;
+    int yOff = y;
+    while(isValidIndex({selectedIndex.x + xOff, selectedIndex.y +yOff})){
+      auto& piece = Pieces[selectedIndex.x + xOff][selectedIndex.y + yOff];
+      auto& highRect = highlightRects[selectedIndex.x + xOff][selectedIndex.y + yOff];
+      if(piece == nullptr){
+        highRect.setFillColor(CANMOVE_HIGHLIGHT); 
+      }
+      else if((piece->getColor() == Pieces::Color::WHITE) != isWhiteSelected()){
+        highRect.setFillColor(ENEMY_HIGHLIGHT);
+        break;
+      }
+      else {
+        break;
+      }
+      xOff+=x;
+      yOff+= y;
+    }
+  }
+
+  void highlightDepthOne(int xOff, int yOff){
+    if(!isValidIndex({selectedIndex.x + xOff, selectedIndex.y +yOff})) return; 
+    auto& piece = Pieces[selectedIndex.x + xOff][selectedIndex.y + yOff];
+    auto& highRect = highlightRects[selectedIndex.x + xOff][selectedIndex.y + yOff];
+    if(piece == nullptr){
+      highRect.setFillColor(CANMOVE_HIGHLIGHT); 
+    }
+    else if((piece->getColor() == Pieces::Color::WHITE) != isWhiteSelected()){
+      highRect.setFillColor(ENEMY_HIGHLIGHT);
+    }
+  }
+
 
 
 };

@@ -39,8 +39,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP"
-      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP"
+      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX"
+      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_CXX_FLAGS: "-stdlib=libc++"
@@ -50,13 +50,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP'
+        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2ef75/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_2ef75.dir/build.make CMakeFiles/cmTC_2ef75.dir/build
-        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP'
-        Building CXX object CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/clang++   -stdlib=libc++    -v -MD -MT CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_19350/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_19350.dir/build.make CMakeFiles/cmTC_19350.dir/build
+        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX'
+        Building CXX object CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/clang++   -stdlib=libc++    -v -MD -MT CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
         Ubuntu clang version 18.1.8 (++20240731025043+3b5b5c1ec4a3-1~exp1~20240731145144.92)
         Target: x86_64-pc-linux-gnu
         Thread model: posix
@@ -70,7 +70,7 @@ events:
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
          (in-process)
-         "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP -v -fcoverage-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/bin/../include/c++/v1 -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -dwarf-debug-flags "/usr/lib/llvm-18/bin/clang --driver-mode=g++ -stdlib=libc++ -v -MD -MT CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp" -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+         "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX -v -fcoverage-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/bin/../include/c++/v1 -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -dwarf-debug-flags "/usr/lib/llvm-18/bin/clang --driver-mode=g++ -stdlib=libc++ -v -MD -MT CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp" -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-pc-linux-gnu
         ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include"
         ignoring nonexistent directory "/include"
@@ -82,9 +82,9 @@ events:
          /usr/include/x86_64-linux-gnu
          /usr/include
         End of search list.
-        Linking CXX executable cmTC_2ef75
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ef75.dir/link.txt --verbose=1
-        /usr/bin/clang++ -stdlib=libc++   -v CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2ef75 
+        Linking CXX executable cmTC_19350
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19350.dir/link.txt --verbose=1
+        /usr/bin/clang++ -stdlib=libc++   -v CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_19350 
         Ubuntu clang version 18.1.8 (++20240731025043+3b5b5c1ec4a3-1~exp1~20240731145144.92)
         Target: x86_64-pc-linux-gnu
         Thread model: posix
@@ -97,8 +97,8 @@ events:
         Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
-         "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2ef75 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-18/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o /lib/x86_64-linux-gnu/crtn.o
-        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP'
+         "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_19350 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-18/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX'
         
       exitCode: 0
   -
@@ -134,13 +134,13 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP']
+        ignore line: [Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2ef75/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_2ef75.dir/build.make CMakeFiles/cmTC_2ef75.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP']
-        ignore line: [Building CXX object CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/clang++   -stdlib=libc++    -v -MD -MT CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_19350/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_19350.dir/build.make CMakeFiles/cmTC_19350.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX']
+        ignore line: [Building CXX object CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/clang++   -stdlib=libc++    -v -MD -MT CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Ubuntu clang version 18.1.8 (++20240731025043+3b5b5c1ec4a3-1~exp1~20240731145144.92)]
         ignore line: [Target: x86_64-pc-linux-gnu]
         ignore line: [Thread model: posix]
@@ -156,7 +156,7 @@ events:
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
         ignore line: [ (in-process)]
-        ignore line: [ "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP -v -fcoverage-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eGAsRP -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/bin/../include/c++/v1 -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -dwarf-debug-flags "/usr/lib/llvm-18/bin/clang --driver-mode=g++ -stdlib=libc++ -v -MD -MT CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp" -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX -v -fcoverage-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-PY5RQX -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/bin/../include/c++/v1 -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -dwarf-debug-flags "/usr/lib/llvm-18/bin/clang --driver-mode=g++ -stdlib=libc++ -v -MD -MT CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp" -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-pc-linux-gnu]
         ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include"]
         ignore line: [ignoring nonexistent directory "/include"]
@@ -168,9 +168,9 @@ events:
         ignore line: [ /usr/include/x86_64-linux-gnu]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_2ef75]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ef75.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/clang++ -stdlib=libc++   -v CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2ef75 ]
+        ignore line: [Linking CXX executable cmTC_19350]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19350.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/clang++ -stdlib=libc++   -v CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_19350 ]
         ignore line: [Ubuntu clang version 18.1.8 (++20240731025043+3b5b5c1ec4a3-1~exp1~20240731145144.92)]
         ignore line: [Target: x86_64-pc-linux-gnu]
         ignore line: [Thread model: posix]
@@ -185,7 +185,7 @@ events:
         ignore line: [@m64]
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
-        link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2ef75 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-18/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+        link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_19350 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-18/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
           arg [/usr/bin/ld] ==> ignore
           arg [-zrelro] ==> ignore
           arg [--hash-style=gnu] ==> ignore
@@ -197,7 +197,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_2ef75] ==> ignore
+          arg [cmTC_19350] ==> ignore
           arg [/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/lib/x86_64-linux-gnu/Scrt1.o]
           arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
           arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o]
@@ -210,7 +210,7 @@ events:
           arg [-L/usr/lib/llvm-18/bin/../lib] ==> dir [/usr/lib/llvm-18/bin/../lib]
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
-          arg [CMakeFiles/cmTC_2ef75.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_19350.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -268,8 +268,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti"
-      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti"
+      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy"
+      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_C_FLAGS: ""
@@ -281,13 +281,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti'
+        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_356ae/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_356ae.dir/build.make CMakeFiles/cmTC_356ae.dir/build
-        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti'
-        Building C object CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o
-        /usr/bin/clang   -v -MD -MT CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4d05a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4d05a.dir/build.make CMakeFiles/cmTC_4d05a.dir/build
+        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy'
+        Building C object CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang   -v -MD -MT CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
         Ubuntu clang version 18.1.8 (++20240731025043+3b5b5c1ec4a3-1~exp1~20240731145144.92)
         Target: x86_64-pc-linux-gnu
         Thread model: posix
@@ -301,7 +301,7 @@ events:
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
          (in-process)
-         "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti -v -fcoverage-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -dwarf-debug-flags "/usr/lib/llvm-18/bin/clang -v -MD -MT CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c" -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+         "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy -v -fcoverage-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -dwarf-debug-flags "/usr/lib/llvm-18/bin/clang -v -MD -MT CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c" -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
         clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-pc-linux-gnu
         ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include"
         ignoring nonexistent directory "/include"
@@ -312,9 +312,9 @@ events:
          /usr/include/x86_64-linux-gnu
          /usr/include
         End of search list.
-        Linking C executable cmTC_356ae
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_356ae.dir/link.txt --verbose=1
-        /usr/bin/clang  -v CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -o cmTC_356ae 
+        Linking C executable cmTC_4d05a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d05a.dir/link.txt --verbose=1
+        /usr/bin/clang  -v CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -o cmTC_4d05a 
         Ubuntu clang version 18.1.8 (++20240731025043+3b5b5c1ec4a3-1~exp1~20240731145144.92)
         Target: x86_64-pc-linux-gnu
         Thread model: posix
@@ -327,8 +327,8 @@ events:
         Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
-         "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_356ae /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-18/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o /lib/x86_64-linux-gnu/crtn.o
-        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti'
+         "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4d05a /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-18/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy'
         
       exitCode: 0
   -
@@ -362,13 +362,13 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti']
+        ignore line: [Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_356ae/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_356ae.dir/build.make CMakeFiles/cmTC_356ae.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti']
-        ignore line: [Building C object CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/clang   -v -MD -MT CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4d05a/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_4d05a.dir/build.make CMakeFiles/cmTC_4d05a.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy']
+        ignore line: [Building C object CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/clang   -v -MD -MT CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
         ignore line: [Ubuntu clang version 18.1.8 (++20240731025043+3b5b5c1ec4a3-1~exp1~20240731145144.92)]
         ignore line: [Target: x86_64-pc-linux-gnu]
         ignore line: [Thread model: posix]
@@ -384,7 +384,7 @@ events:
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
         ignore line: [ (in-process)]
-        ignore line: [ "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti -v -fcoverage-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-frYNti -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -dwarf-debug-flags "/usr/lib/llvm-18/bin/clang -v -MD -MT CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c" -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy -v -fcoverage-compilation-dir=/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-RmX6Cy -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -dwarf-debug-flags "/usr/lib/llvm-18/bin/clang -v -MD -MT CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c" -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-pc-linux-gnu]
         ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include"]
         ignore line: [ignoring nonexistent directory "/include"]
@@ -395,9 +395,9 @@ events:
         ignore line: [ /usr/include/x86_64-linux-gnu]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_356ae]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_356ae.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/clang  -v CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -o cmTC_356ae ]
+        ignore line: [Linking C executable cmTC_4d05a]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d05a.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/clang  -v CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -o cmTC_4d05a ]
         ignore line: [Ubuntu clang version 18.1.8 (++20240731025043+3b5b5c1ec4a3-1~exp1~20240731145144.92)]
         ignore line: [Target: x86_64-pc-linux-gnu]
         ignore line: [Thread model: posix]
@@ -412,7 +412,7 @@ events:
         ignore line: [@m64]
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
-        link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_356ae /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-18/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+        link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4d05a /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/llvm-18/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
           arg [/usr/bin/ld] ==> ignore
           arg [-zrelro] ==> ignore
           arg [--hash-style=gnu] ==> ignore
@@ -424,7 +424,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_356ae] ==> ignore
+          arg [cmTC_4d05a] ==> ignore
           arg [/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/lib/x86_64-linux-gnu/Scrt1.o]
           arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
           arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o]
@@ -437,7 +437,7 @@ events:
           arg [-L/usr/lib/llvm-18/bin/../lib] ==> dir [/usr/lib/llvm-18/bin/../lib]
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
-          arg [CMakeFiles/cmTC_356ae.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_4d05a.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--as-needed] ==> ignore
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -476,8 +476,8 @@ events:
     checks:
       - "Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so"
     directories:
-      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eYwpbh"
-      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eYwpbh"
+      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-CmEers"
+      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-CmEers"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_C_FLAGS: ""
@@ -490,17 +490,17 @@ events:
       variable: "X11_LIB_X11_SOLO"
       cached: true
       stdout: |
-        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eYwpbh'
+        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-CmEers'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_060f6/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_060f6.dir/build.make CMakeFiles/cmTC_060f6.dir/build
-        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eYwpbh'
-        Building C object CMakeFiles/cmTC_060f6.dir/CheckFunctionExists.c.o
-        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -MD -MT CMakeFiles/cmTC_060f6.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_060f6.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_060f6.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eYwpbh/CheckFunctionExists.c
-        Linking C executable cmTC_060f6
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_060f6.dir/link.txt --verbose=1
-        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_060f6.dir/CheckFunctionExists.c.o -o cmTC_060f6  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
-        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-eYwpbh'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d3f47/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d3f47.dir/build.make CMakeFiles/cmTC_d3f47.dir/build
+        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-CmEers'
+        Building C object CMakeFiles/cmTC_d3f47.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -MD -MT CMakeFiles/cmTC_d3f47.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_d3f47.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_d3f47.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-CmEers/CheckFunctionExists.c
+        Linking C executable cmTC_d3f47
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3f47.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_d3f47.dir/CheckFunctionExists.c.o -o cmTC_d3f47  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-CmEers'
         
       exitCode: 0
   -
@@ -513,8 +513,8 @@ events:
     checks:
       - "Looking for gethostbyname"
     directories:
-      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-Pk8KJJ"
-      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-Pk8KJJ"
+      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-KUwJvD"
+      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-KUwJvD"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_C_FLAGS: ""
@@ -527,17 +527,17 @@ events:
       variable: "CMAKE_HAVE_GETHOSTBYNAME"
       cached: true
       stdout: |
-        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-Pk8KJJ'
+        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-KUwJvD'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_67c7e/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_67c7e.dir/build.make CMakeFiles/cmTC_67c7e.dir/build
-        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-Pk8KJJ'
-        Building C object CMakeFiles/cmTC_67c7e.dir/CheckFunctionExists.c.o
-        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=gethostbyname -MD -MT CMakeFiles/cmTC_67c7e.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_67c7e.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_67c7e.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-Pk8KJJ/CheckFunctionExists.c
-        Linking C executable cmTC_67c7e
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67c7e.dir/link.txt --verbose=1
-        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_67c7e.dir/CheckFunctionExists.c.o -o cmTC_67c7e 
-        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-Pk8KJJ'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fb700/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fb700.dir/build.make CMakeFiles/cmTC_fb700.dir/build
+        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-KUwJvD'
+        Building C object CMakeFiles/cmTC_fb700.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=gethostbyname -MD -MT CMakeFiles/cmTC_fb700.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_fb700.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_fb700.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-KUwJvD/CheckFunctionExists.c
+        Linking C executable cmTC_fb700
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb700.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_fb700.dir/CheckFunctionExists.c.o -o cmTC_fb700 
+        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-KUwJvD'
         
       exitCode: 0
   -
@@ -550,8 +550,8 @@ events:
     checks:
       - "Looking for connect"
     directories:
-      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-lcMylc"
-      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-lcMylc"
+      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-yjCj39"
+      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-yjCj39"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_C_FLAGS: ""
@@ -564,17 +564,17 @@ events:
       variable: "CMAKE_HAVE_CONNECT"
       cached: true
       stdout: |
-        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-lcMylc'
+        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-yjCj39'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_788b2/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_788b2.dir/build.make CMakeFiles/cmTC_788b2.dir/build
-        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-lcMylc'
-        Building C object CMakeFiles/cmTC_788b2.dir/CheckFunctionExists.c.o
-        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=connect -MD -MT CMakeFiles/cmTC_788b2.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_788b2.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_788b2.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-lcMylc/CheckFunctionExists.c
-        Linking C executable cmTC_788b2
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_788b2.dir/link.txt --verbose=1
-        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_788b2.dir/CheckFunctionExists.c.o -o cmTC_788b2 
-        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-lcMylc'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8da1a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8da1a.dir/build.make CMakeFiles/cmTC_8da1a.dir/build
+        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-yjCj39'
+        Building C object CMakeFiles/cmTC_8da1a.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=connect -MD -MT CMakeFiles/cmTC_8da1a.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_8da1a.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_8da1a.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-yjCj39/CheckFunctionExists.c
+        Linking C executable cmTC_8da1a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8da1a.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_8da1a.dir/CheckFunctionExists.c.o -o cmTC_8da1a 
+        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-yjCj39'
         
       exitCode: 0
   -
@@ -587,8 +587,8 @@ events:
     checks:
       - "Looking for remove"
     directories:
-      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-8EctHF"
-      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-8EctHF"
+      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-oitEjF"
+      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-oitEjF"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_C_FLAGS: ""
@@ -601,17 +601,17 @@ events:
       variable: "CMAKE_HAVE_REMOVE"
       cached: true
       stdout: |
-        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-8EctHF'
+        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-oitEjF'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d2aa6/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_d2aa6.dir/build.make CMakeFiles/cmTC_d2aa6.dir/build
-        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-8EctHF'
-        Building C object CMakeFiles/cmTC_d2aa6.dir/CheckFunctionExists.c.o
-        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=remove -MD -MT CMakeFiles/cmTC_d2aa6.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_d2aa6.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_d2aa6.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-8EctHF/CheckFunctionExists.c
-        Linking C executable cmTC_d2aa6
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2aa6.dir/link.txt --verbose=1
-        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_d2aa6.dir/CheckFunctionExists.c.o -o cmTC_d2aa6 
-        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-8EctHF'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d2507/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d2507.dir/build.make CMakeFiles/cmTC_d2507.dir/build
+        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-oitEjF'
+        Building C object CMakeFiles/cmTC_d2507.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=remove -MD -MT CMakeFiles/cmTC_d2507.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_d2507.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_d2507.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-oitEjF/CheckFunctionExists.c
+        Linking C executable cmTC_d2507
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2507.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_d2507.dir/CheckFunctionExists.c.o -o cmTC_d2507 
+        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-oitEjF'
         
       exitCode: 0
   -
@@ -624,8 +624,8 @@ events:
     checks:
       - "Looking for shmat"
     directories:
-      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-AlgViK"
-      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-AlgViK"
+      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-4PhhJ0"
+      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-4PhhJ0"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_C_FLAGS: ""
@@ -638,17 +638,17 @@ events:
       variable: "CMAKE_HAVE_SHMAT"
       cached: true
       stdout: |
-        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-AlgViK'
+        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-4PhhJ0'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2ae07/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_2ae07.dir/build.make CMakeFiles/cmTC_2ae07.dir/build
-        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-AlgViK'
-        Building C object CMakeFiles/cmTC_2ae07.dir/CheckFunctionExists.c.o
-        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=shmat -MD -MT CMakeFiles/cmTC_2ae07.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_2ae07.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_2ae07.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-AlgViK/CheckFunctionExists.c
-        Linking C executable cmTC_2ae07
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ae07.dir/link.txt --verbose=1
-        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_2ae07.dir/CheckFunctionExists.c.o -o cmTC_2ae07 
-        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-AlgViK'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bcac4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bcac4.dir/build.make CMakeFiles/cmTC_bcac4.dir/build
+        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-4PhhJ0'
+        Building C object CMakeFiles/cmTC_bcac4.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=shmat -MD -MT CMakeFiles/cmTC_bcac4.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_bcac4.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_bcac4.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-4PhhJ0/CheckFunctionExists.c
+        Linking C executable cmTC_bcac4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bcac4.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_bcac4.dir/CheckFunctionExists.c.o -o cmTC_bcac4 
+        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-4PhhJ0'
         
       exitCode: 0
   -
@@ -661,8 +661,8 @@ events:
     checks:
       - "Looking for IceConnectionNumber in ICE"
     directories:
-      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-e2HiJZ"
-      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-e2HiJZ"
+      source: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-utIYPC"
+      binary: "/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-utIYPC"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_C_FLAGS: ""
@@ -675,17 +675,17 @@ events:
       variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
       cached: true
       stdout: |
-        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-e2HiJZ'
+        Change Dir: '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-utIYPC'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_39633/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_39633.dir/build.make CMakeFiles/cmTC_39633.dir/build
-        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-e2HiJZ'
-        Building C object CMakeFiles/cmTC_39633.dir/CheckFunctionExists.c.o
-        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -MD -MT CMakeFiles/cmTC_39633.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_39633.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_39633.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-e2HiJZ/CheckFunctionExists.c
-        Linking C executable cmTC_39633
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39633.dir/link.txt --verbose=1
-        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_39633.dir/CheckFunctionExists.c.o -o cmTC_39633  -lICE 
-        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-e2HiJZ'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_916cf/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_916cf.dir/build.make CMakeFiles/cmTC_916cf.dir/build
+        gmake[1]: Entering directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-utIYPC'
+        Building C object CMakeFiles/cmTC_916cf.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -MD -MT CMakeFiles/cmTC_916cf.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_916cf.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_916cf.dir/CheckFunctionExists.c.o -c /home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-utIYPC/CheckFunctionExists.c
+        Linking C executable cmTC_916cf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_916cf.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_916cf.dir/CheckFunctionExists.c.o -o cmTC_916cf  -lICE 
+        gmake[1]: Leaving directory '/home/aiden-allen/Desktop/chess/build/CMakeFiles/CMakeScratch/TryCompile-utIYPC'
         
       exitCode: 0
 ...

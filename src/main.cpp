@@ -31,6 +31,9 @@ int main() {
               if (event.mouseButton.button == sf::Mouse::Left) {
                 if (b.isSelected) {
                   b.placePiece();
+                  // if(b.isInCheck()){
+                  //   std::cerr << "in check" << std::endl;
+                  // }
                 } else {
                   b.selectPiece();
                 }
