@@ -117,11 +117,35 @@ bool isInCheck(sf::Vector2<int> kingPos){
       checkFlag = true;
     }
     
-    // if(checkKnights(kingPos)) {
-    //   std::cerr << "in check by knight" << std::endl;
-    // }
+    if(checkKnight(kingPos, playerColor)) {
+      std::cerr << "in check by knight" << std::endl;
+    }
 
     return checkFlag;
+  }
+
+  bool checkKnight(sf::Vector2<int> kingPos, Pieces::Color c){
+    bool inCheckFlag = checkKnightHelper({}, kingPos, c);
+    if(checkKnightHelper({2, 1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({2, -1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({-2, -1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({-2, 1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({1, 2}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({-1, 2}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({1, -2}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({-1, -2}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    return inCheckFlag;
+  }
+
+  bool checkKnightHelper(sf::Vector2<int> off, sf::Vector2<int> kingPos, Pieces::Color c){
+    auto checkPos = kingPos + off;
+    if(!isValidIndex(checkPos)) return false;
+    if(isSameColor(checkPos, c)) return false;
+    if(!checkPosition(checkPos)) return false;
+    if(Pieces[checkPos.x][checkPos.y]->getType() == Pieces::Type::KNIGHT){
+      highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+    }
+    return false;
   }
 
   bool checkStraight(sf::Vector2<int> kingPos, Pieces::Color c){
@@ -138,7 +162,7 @@ bool isInCheck(sf::Vector2<int> kingPos){
     bool flag = false;
     while(isValidIndex(checkPos)){
       if(isSameColor(checkPos, c)) return false;
-      if(checkPosition(checkPos, c)){
+      if(checkPosition(checkPos)){
         auto& piece = Pieces[checkPos.x][checkPos.y];
         if(piece->getType() == Pieces::Type::KING && depth == 0){
           highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
@@ -175,7 +199,7 @@ bool isInCheck(sf::Vector2<int> kingPos){
     auto checkPos = kingPos + off;
     while(isValidIndex(checkPos)){
       if(isSameColor(checkPos, c)) return false;
-      if(checkPosition(checkPos, c)){
+      if(checkPosition(checkPos)){
         auto& piece = Pieces[checkPos.x][checkPos.y];
         if(piece->getType() == Pieces::Type::PAWN && depth == 0){
           highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
@@ -226,7 +250,7 @@ bool isInCheck(sf::Vector2<int> kingPos){
   // Check to see if the kings in check helper
   // Used to see if an offset from the kings position
   // has an enemy on the tile 
-  bool checkPosition(sf::Vector2<int> newPos, Pieces::Color c){
+  bool checkPosition(sf::Vector2<int> newPos){
     if(!isValidIndex(newPos)) return false;
     if(Pieces[newPos.x][newPos.y] == nullptr) return false;
     return true;
