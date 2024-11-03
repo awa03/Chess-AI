@@ -2,6 +2,7 @@
 #define _BOARD_HPP_
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "pieces.hpp"
 #include <iostream>
 #include <vector>
@@ -29,6 +30,8 @@ public:
       std::cerr << "Failed to load textures." << std::endl;
     }
     placeInitialPieces();
+
+    InitializeAudio();
 
     Rects.resize(ROW, std::vector<sf::RectangleShape>(COL));
     highlightRects.resize(ROW, std::vector<sf::RectangleShape>(COL));
@@ -332,7 +335,7 @@ bool isInCheck(sf::Vector2<int> kingPos){
       Pieces[selectedIndex.x][selectedIndex.y]->hasMoved = true;
       Pieces[placeIndex.x][placeIndex.y] = std::move(Pieces[selectedIndex.x][selectedIndex.y]);
       centerPiece(*Pieces[placeIndex.x][placeIndex.y]->getSprite(), placeIndex);
-
+      // placeSound.play();
       isSelected = false;  
       selectedIndex = {-1, -1};  
       whitesMove = !whitesMove;
@@ -612,8 +615,16 @@ private:
     }
   }
 
+  // sf::Sound placeSound;
 
+  void InitializeAudio(){
+    // sf::SoundBuffer buffer;
+    // if(buffer.loadFromFile("static/audio/movePiece-audio.mp3")){
+    //   std::cout << "Error Loading Sound File";
+    // } 
 
+    // placeSound.setBuffer(buffer);
+  }
 };
 
 #endif // _BOARD_HPP_
