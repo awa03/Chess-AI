@@ -31,6 +31,8 @@ public:
     }
     placeInitialPieces();
 
+    InitializeAudio();
+
     Rects.resize(ROW, std::vector<sf::RectangleShape>(COL));
     highlightRects.resize(ROW, std::vector<sf::RectangleShape>(COL));
     for (int i = 0; i < ROW; i++) {
@@ -93,12 +95,14 @@ public:
   // Check if the current players king is in check
   // Will find from the kings relative position if
   // any pieces are within scope for an attack
+  //
+  // So I was thinking in my sleep last night, 
+  // I should refactor this to check for a king at a given position
+  // not where the king currently is, and omg I already did it
+  // LOL
 bool isInCheck(sf::Vector2<int> kingPos){
-    // TODO:
-    // Refactor so we keep track of kings position
-    // This will optimize the efficency of this function
-    // Reducing the time complexity by 64 operations
-    
+
+        
     Pieces::Color playerColor = getPlayerColor();
 
     // error if index invalid for king pos
@@ -231,22 +235,7 @@ bool isInCheck(sf::Vector2<int> kingPos){
     else return Pieces[pieceIndex.x][pieceIndex.y]->getColor() == c;
   }
 
-  // Working as expected
-  // find the kings position within a 2d array
-  // This will be deprecated soon for performance
-  // Reduce O(m * n) to O(1)
-  sf::Vector2<int> getKingPosition(Pieces::Color playerColor){
-    for(int rowIndex = 0; rowIndex < ROW; rowIndex++){
-      for(int colIndex =0; colIndex < COL; colIndex++){
-        if(Pieces[rowIndex][colIndex] != nullptr && 
-          Pieces[rowIndex][colIndex]->getColor() == playerColor &&
-          Pieces[rowIndex][colIndex]->getType() == Pieces::Type::KING){
-          return {rowIndex, colIndex};
-        }
-      }
-    }
-    return {-1, -1};
-  }
+  
 
   // Check to see if the kings in check helper
   // Used to see if an offset from the kings position
@@ -373,6 +362,8 @@ bool isInCheck(sf::Vector2<int> kingPos){
   bool isSelected = false;
 
 private:
+  sf::Vector2<int> wKingPos;
+  sf::Vector2<int> bKingPos;
   std::vector<std::vector<sf::RectangleShape>> Rects;
   std::vector<std::vector<sf::RectangleShape>> highlightRects;
   std::vector<std::vector<std::unique_ptr<Pieces::Piece>>> Pieces;
@@ -613,6 +604,33 @@ private:
     }
   }
 
+  // Working as expected
+  // find the kings position within a 2d array
+  // This will be deprecated soon for performance
+  // Reduce O(m * n) to O(1)
+  sf::Vector2<int> getKingPosition(Pieces::Color playerColor){
+    // Implement Tommorow
+    // auto& wPos = Pieces[wKingPos.x][wKingPos.y];
+    // auto& bPos = Pieces[bKingPos.x][bKingPos.y];
+    // if((wPos->getType() == Pieces::Type::KING) && (isSameColor(wKingPos, Pieces::Color::BLACK))){
+    //   return wKingPos;
+    // }
+    // else if((bPos->getType() == Pieces::Type::KING) && (isSameColor(bKingPos, Pieces::Color::BLACK))){
+    //   return bKingPos;
+    // }
+
+    // Should never run but just in case -- ? 
+    for(int rowIndex = 0; rowIndex < ROW; rowIndex++){
+      for(int colIndex =0; colIndex < COL; colIndex++){
+        if(Pieces[rowIndex][colIndex] != nullptr && 
+          Pieces[rowIndex][colIndex]->getColor() == playerColor &&
+          Pieces[rowIndex][colIndex]->getType() == Pieces::Type::KING){
+          return {rowIndex, colIndex};
+        }
+      }
+    }
+    return {-1, -1};
+  }
 };
 
 #endif // _BOARD_HPP_
