@@ -31,8 +31,6 @@ public:
     }
     placeInitialPieces();
 
-    InitializeAudio();
-
     Rects.resize(ROW, std::vector<sf::RectangleShape>(COL));
     highlightRects.resize(ROW, std::vector<sf::RectangleShape>(COL));
     for (int i = 0; i < ROW; i++) {
@@ -54,7 +52,7 @@ public:
       highlightRects[selectedIndex.x][selectedIndex.y].setFillColor(SELECTED_HIGHLIGHT); // Highlight selected square
       std::vector<int> yDirVec = {-1, 1};
       int xDir = (piece->getColor() == Pieces::Color::WHITE) ? 1 : -1; // White moves up, Black moves down
-      isInCheck(getKingPosition(getPlayerColor()));
+      isInCheck(getKingPosition(getPlayerColor()), true);
       switch(piece->getType()){
 
         case Pieces::Type::PAWN:
@@ -100,7 +98,8 @@ public:
   // I should refactor this to check for a king at a given position
   // not where the king currently is, and omg I already did it
   // LOL
-bool isInCheck(sf::Vector2<int> kingPos){
+  // Default will highlight
+bool isInCheck(sf::Vector2<int> kingPos, bool highlight = false){
 
         
     Pieces::Color playerColor = getPlayerColor();
@@ -113,55 +112,56 @@ bool isInCheck(sf::Vector2<int> kingPos){
     }
 
     bool checkFlag = false;
-    if(checkDiagonal(kingPos, playerColor)){
+    if(checkDiagonal(kingPos, playerColor, highlight)){
       std::cerr << "in check diagonal" << std::endl;
       checkFlag = true;
     }
-    if(checkStraight(kingPos, playerColor)){
+    if(checkStraight(kingPos, playerColor, highlight)){
       std::cerr << "in check straight" << std::endl;
       checkFlag = true;
     }
     
-    if(checkKnight(kingPos, playerColor)) {
+    if(checkKnight(kingPos, playerColor, highlight)) {
       std::cerr << "in check by knight" << std::endl;
     }
 
     return checkFlag;
   }
 
-  bool checkKnight(sf::Vector2<int> kingPos, Pieces::Color c){
-    bool inCheckFlag = checkKnightHelper({}, kingPos, c);
-    if(checkKnightHelper({2, 1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkKnightHelper({2, -1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkKnightHelper({-2, -1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkKnightHelper({-2, 1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkKnightHelper({1, 2}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkKnightHelper({-1, 2}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkKnightHelper({1, -2}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkKnightHelper({-1, -2}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+  bool checkKnight(sf::Vector2<int> kingPos, Pieces::Color c, bool highlight = true){
+    bool inCheckFlag = checkKnightHelper({}, kingPos, c, highlight);
+    if(checkKnightHelper({2, 1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({2, -1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({-2, -1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({-2, 1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({1, 2}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({-1, 2}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({1, -2}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkKnightHelper({-1, -2}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
     return inCheckFlag;
   }
 
-  bool checkKnightHelper(sf::Vector2<int> off, sf::Vector2<int> kingPos, Pieces::Color c){
+  bool checkKnightHelper(sf::Vector2<int> off, sf::Vector2<int> kingPos, Pieces::Color c, bool highlight){
     auto checkPos = kingPos + off;
     if(!isValidIndex(checkPos)) return false;
     if(isSameColor(checkPos, c)) return false;
     if(!checkPosition(checkPos)) return false;
     if(Pieces[checkPos.x][checkPos.y]->getType() == Pieces::Type::KNIGHT){
-      highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+      if(highlight) highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+      return true;
     }
     return false;
   }
 
-  bool checkStraight(sf::Vector2<int> kingPos, Pieces::Color c){
-    bool inCheckFlag = checkDiagonalHelper({1, 0}, kingPos, c);
-    if(checkStraightHelper({0, 1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkStraightHelper({-1, 0}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkStraightHelper({0, -1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+  bool checkStraight(sf::Vector2<int> kingPos, Pieces::Color c, bool highlight = true){
+    bool inCheckFlag = checkStraightHelper({1, 0}, kingPos, c, highlight);
+    if(checkStraightHelper({0, 1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkStraightHelper({-1, 0}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkStraightHelper({0, -1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
     return inCheckFlag;
   }
 
-  bool checkStraightHelper(sf::Vector2<int> off, sf::Vector2<int> kingPos, Pieces::Color c){
+  bool checkStraightHelper(sf::Vector2<int> off, sf::Vector2<int> kingPos, Pieces::Color c, bool highlight){
     int depth = 0;
     auto checkPos = kingPos + off;
     bool flag = false;
@@ -170,15 +170,15 @@ bool isInCheck(sf::Vector2<int> kingPos){
       if(checkPosition(checkPos)){
         auto& piece = Pieces[checkPos.x][checkPos.y];
         if(piece->getType() == Pieces::Type::KING && depth == 0){
-          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          if(highlight) highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
           flag = true;
         }
         else if(piece->getType() == Pieces::Type::QUEEN){
-          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          if(highlight) highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
           flag = true;
         }
         else if(piece->getType() == Pieces::Type::ROOK){
-          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          if(highlight) highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
           flag = true;
         }
         return flag;
@@ -189,16 +189,16 @@ bool isInCheck(sf::Vector2<int> kingPos){
     return flag;
   }
 
-  bool checkDiagonal(sf::Vector2<int> kingPos, Pieces::Color c){
+  bool checkDiagonal(sf::Vector2<int> kingPos, Pieces::Color c, bool highlight = true){
     // TODO: Make one return -- my brain doesnt want to deal with this rn
-    bool inCheckFlag = checkDiagonalHelper({1, 1}, kingPos, c);
-    if(checkDiagonalHelper({1, -1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkDiagonalHelper({-1, 1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
-    if(checkDiagonalHelper({-1, -1}, kingPos, c) && !inCheckFlag) inCheckFlag = true;
+    bool inCheckFlag = checkDiagonalHelper({1, 1}, kingPos, c, highlight);
+    if(checkDiagonalHelper({1, -1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkDiagonalHelper({-1, 1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
+    if(checkDiagonalHelper({-1, -1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
     return inCheckFlag;
   }
 
-  bool checkDiagonalHelper(sf::Vector2<int> off, sf::Vector2<int> kingPos, Pieces::Color c){
+  bool checkDiagonalHelper(sf::Vector2<int> off, sf::Vector2<int> kingPos, Pieces::Color c, bool highlight){
     int depth = 0;
     bool flag = false;
     auto checkPos = kingPos + off;
@@ -207,19 +207,19 @@ bool isInCheck(sf::Vector2<int> kingPos){
       if(checkPosition(checkPos)){
         auto& piece = Pieces[checkPos.x][checkPos.y];
         if(piece->getType() == Pieces::Type::PAWN && depth == 0){
-          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          if(highlight) highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
           flag = true;
         }
         if(piece->getType() == Pieces::Type::KING && depth == 0){
-          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          if(highlight) highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
           flag = true;
         }
         else if(piece->getType() == Pieces::Type::QUEEN){
-          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          if(highlight) highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
           flag = true;
         }
         else if(piece->getType() == Pieces::Type::BISHOP){
-          highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
+          if(highlight) highlightRects[checkPos.x][checkPos.y].setFillColor(CHECK_HIGHLIGHT);
           flag = true;
         }
         return flag;
@@ -300,6 +300,23 @@ bool isInCheck(sf::Vector2<int> kingPos){
       return;
     }
 
+
+    // TODO: REFACTOR FOR EARLY RETURNS
+    // 
+    // Checks if the place index is in check -- ensures cant move to check pos
+    // if (isValidIndex(selectedIndex) && 
+    //   isValidIndex(placeIndex) &&
+    //   Pieces[placeIndex.x][placeIndex.y] != nullptr && 
+    //   Pieces[selectedIndex.x][selectedIndex.y]->getColor() == Pieces[placeIndex.x][placeIndex.y]->getColor() && 
+    //   Pieces[selectedIndex.x][selectedIndex.y]->getType() == Pieces::KING && 
+    //   isInCheck(placeIndex, false)) 
+    // {
+    //   std::cout << "player is now in check! Cant move to this position" << std::endl;
+    //   highlightRects[placeIndex.x][placeIndex.y].setFillColor(CHECK_HIGHLIGHT);  
+    //   return;
+    // }
+
+    
     if((isValidIndex(selectedIndex) && isValidIndex(selectedIndex) && Pieces[placeIndex.x][placeIndex.y] != nullptr) && 
       (Pieces[selectedIndex.x][selectedIndex.y]->getColor() == Pieces[placeIndex.x][placeIndex.y]->getColor())) {
       selectedIndex = placeIndex;
@@ -307,6 +324,7 @@ bool isInCheck(sf::Vector2<int> kingPos){
       highlightPossibleMoves();
       return;
     }
+
     else if(highlightRects[placeIndex.x][placeIndex.y].getFillColor() == ENEMY_HIGHLIGHT){
       std::cout << "player captured" << std::endl;   
     }
@@ -314,9 +332,6 @@ bool isInCheck(sf::Vector2<int> kingPos){
       std::cout << "space invalid" << std::endl;
       return;
     }
-    
-
-    
 
     if (isValidIndex(selectedIndex) && isValidIndex(placeIndex)) {
       Pieces[selectedIndex.x][selectedIndex.y]->hasMoved = true;
