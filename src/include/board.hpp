@@ -31,8 +31,6 @@ public:
     }
     placeInitialPieces();
 
-    InitializeAudio();
-
     Rects.resize(ROW, std::vector<sf::RectangleShape>(COL));
     highlightRects.resize(ROW, std::vector<sf::RectangleShape>(COL));
     for (int i = 0; i < ROW; i++) {
@@ -615,16 +613,6 @@ private:
     }
   }
 
-  // sf::Sound placeSound;
-
-  void InitializeAudio(){
-    // sf::SoundBuffer buffer;
-    // if(buffer.loadFromFile("static/audio/movePiece-audio.mp3")){
-    //   std::cout << "Error Loading Sound File";
-    // } 
-
-    // placeSound.setBuffer(buffer);
-  }
 };
 
 #endif // _BOARD_HPP_
