@@ -9,10 +9,15 @@ From their observations the study concluded that _Stock Fish_ out performed _LC 
 
 ### Useful Information for this Project
 - Attempting to test my model with Plasketts puzzle will be an effective way of gauging the performance of the model. Since the depth required to solve the puzzle is 15 moves, as well as the need for underpromotion.
+-  Stockfish heavily relies on alpha-beta search. 
+    - Would be fairly easy to implement, but im really hoping to make a neural network, but this would be a good option for a starting point. Or minimax
+- 
 
 ****
 
 ### General Notes
+
+Plasketts puzzle is a famous puzzle that stumped many grandmasters within the  Brussels tournament in 1987.
 
 
 

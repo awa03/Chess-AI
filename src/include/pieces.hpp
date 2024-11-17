@@ -16,7 +16,8 @@ namespace Pieces {
 
   enum Color {
     WHITE,
-    BLACK
+    BLACK,
+    NAC
   };
 
   class Piece {

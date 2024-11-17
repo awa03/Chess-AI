@@ -42,6 +42,17 @@ int main() {
         }
 
         float deltaTime = clock.restart().asSeconds();
+        auto a =b.getBoardChar();
+        for(auto& r :a) {
+            for(auto& c : r) {
+                std::cout << c.first;
+            }
+            std::cout << "\n";
+        }
+
+        std::cout << "\n";
+        std::cout << "\n";
+
         // b.DebugInfo();
         window.clear();
         // window.draw(title);  // Uncomment this line to display the title
