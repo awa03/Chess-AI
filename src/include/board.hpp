@@ -415,14 +415,15 @@ private:
   void placeInitialPieces() {
     // Place Pawns
     for (int j = 0; j < COL; j++) {
-      Pieces[1][j] = createPiece(Pieces::PAWN, Pieces::WHITE);
-      Pieces[6][j] = createPiece(Pieces::PAWN, Pieces::BLACK);
-      Pieces[1][j]->setTexture(w_pawn_texture);
-      Pieces[6][j]->setTexture(b_pawn_texture);
-      centerPiece(*Pieces[1][j]->getSprite(), {1, j});
-      centerPiece(*Pieces[6][j]->getSprite(), {6, j});
+        Pieces[1][j] = createPiece(Pieces::PAWN, Pieces::WHITE);
+        Pieces[6][j] = createPiece(Pieces::PAWN, Pieces::BLACK);
+        Pieces[1][j]->setTexture(w_pawn_texture);
+        Pieces[6][j]->setTexture(b_pawn_texture);
+        centerPiece(*Pieces[1][j]->getSprite(), {1, j});
+        centerPiece(*Pieces[6][j]->getSprite(), {6, j});
     }
 
+    // Place Rooks
     Pieces[0][0] = createPiece(Pieces::ROOK, Pieces::WHITE);
     Pieces[0][7] = createPiece(Pieces::ROOK, Pieces::WHITE);
     Pieces[7][0] = createPiece(Pieces::ROOK, Pieces::BLACK);
@@ -464,14 +465,15 @@ private:
     Pieces[0][4]->setTexture(w_king_texture);
     Pieces[7][4]->setTexture(b_king_texture);
 
+    // Center all pieces on their squares
     for (int i = 0; i < ROW; i++) {
-      for (int j = 0; j < COL; j++) {
-        if (Pieces[i][j]) {
-          centerPiece(*Pieces[i][j]->getSprite(), {i, j});
+        for (int j = 0; j < COL; j++) {
+            if (Pieces[i][j]) {
+                centerPiece(*Pieces[i][j]->getSprite(), {i, j});
+            }
         }
-      }
     }
-  }
+}
 
   std::unique_ptr<Pieces::Piece> createPiece(Pieces::Type type, Pieces::Color color) {
     switch (type) {
