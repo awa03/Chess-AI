@@ -7,7 +7,7 @@
 #include <iostream>
 #include <vector>
 #include <memory>
-
+#include <unordered_map>
 
 #define ENEMY_HIGHLIGHT sf::Color(255, 0, 0, 50)
 #define CHECK_HIGHLIGHT sf::Color(255, 100, 255, 100)
@@ -196,6 +196,33 @@ bool isInCheck(sf::Vector2<int> kingPos, bool highlight = false){
     if(checkDiagonalHelper({-1, 1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
     if(checkDiagonalHelper({-1, -1}, kingPos, c, highlight) && !inCheckFlag) inCheckFlag = true;
     return inCheckFlag;
+  }
+
+  // make understandable to the model
+  std::vector<std::vector<std::pair<char, Pieces::Color> > > getBoardChar() {
+    std::vector<std::vector<std::pair<char, Pieces::Color> > > board;
+
+    std::unordered_map<Pieces::Type, char> colorMap = {
+      {Pieces::Type::KING, 'K'},
+      {Pieces::Type::QUEEN, 'Q'},
+      {Pieces::Type::ROOK, 'R'},
+      {Pieces::Type::KNIGHT, 'N'},
+      {Pieces::Type::BISHOP, 'B'},
+      {Pieces::Type::PAWN, 'P'},
+    };
+    board.resize(8);
+    for (int i = 0; i < 8; i++) {
+      for (int j = 0; j < 8; j++) {
+        auto& piece = Pieces[i][j];
+        if(piece == nullptr) {
+          board[i].emplace_back('-', Pieces::Color::NAC);
+        } else {
+          auto characterRep = colorMap.find(piece->getType())->second;
+          board[i].emplace_back(characterRep, piece->getColor());
+        }
+      }
+    }
+    return board;
   }
 
   bool checkDiagonalHelper(sf::Vector2<int> off, sf::Vector2<int> kingPos, Pieces::Color c, bool highlight){
@@ -415,14 +442,15 @@ private:
   void placeInitialPieces() {
     // Place Pawns
     for (int j = 0; j < COL; j++) {
-      Pieces[1][j] = createPiece(Pieces::PAWN, Pieces::WHITE);
-      Pieces[6][j] = createPiece(Pieces::PAWN, Pieces::BLACK);
-      Pieces[1][j]->setTexture(w_pawn_texture);
-      Pieces[6][j]->setTexture(b_pawn_texture);
-      centerPiece(*Pieces[1][j]->getSprite(), {1, j});
-      centerPiece(*Pieces[6][j]->getSprite(), {6, j});
+        Pieces[1][j] = createPiece(Pieces::PAWN, Pieces::WHITE);
+        Pieces[6][j] = createPiece(Pieces::PAWN, Pieces::BLACK);
+        Pieces[1][j]->setTexture(w_pawn_texture);
+        Pieces[6][j]->setTexture(b_pawn_texture);
+        centerPiece(*Pieces[1][j]->getSprite(), {1, j});
+        centerPiece(*Pieces[6][j]->getSprite(), {6, j});
     }
 
+    // Place Rooks
     Pieces[0][0] = createPiece(Pieces::ROOK, Pieces::WHITE);
     Pieces[0][7] = createPiece(Pieces::ROOK, Pieces::WHITE);
     Pieces[7][0] = createPiece(Pieces::ROOK, Pieces::BLACK);
@@ -464,14 +492,15 @@ private:
     Pieces[0][4]->setTexture(w_king_texture);
     Pieces[7][4]->setTexture(b_king_texture);
 
+    // Center all pieces on their squares
     for (int i = 0; i < ROW; i++) {
-      for (int j = 0; j < COL; j++) {
-        if (Pieces[i][j]) {
-          centerPiece(*Pieces[i][j]->getSprite(), {i, j});
+        for (int j = 0; j < COL; j++) {
+            if (Pieces[i][j]) {
+                centerPiece(*Pieces[i][j]->getSprite(), {i, j});
+            }
         }
-      }
     }
-  }
+}
 
   std::unique_ptr<Pieces::Piece> createPiece(Pieces::Type type, Pieces::Color color) {
     switch (type) {
